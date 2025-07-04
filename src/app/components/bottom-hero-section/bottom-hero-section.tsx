@@ -1,10 +1,10 @@
 "use client"
 import React from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import ArrowRight from "@/Kings & Queens/arrow.svg"
 
 interface BottomHeroSectionProps {
-  image?: React.ReactNode;
+  image?: string | StaticImageData;
   imageAlt?: string;
 }
 
