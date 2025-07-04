@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { MapPin } from 'lucide-react';
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
+  const [formData] = useState({
     firstName: '',
     lastName: '',
     email: '',
@@ -11,13 +11,7 @@ export default function ContactForm() {
     message: ''
   });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
+ 
 
 
   return (
@@ -38,7 +32,7 @@ export default function ContactForm() {
                     id="firstName"
                     name="firstName"
                     value={formData.firstName}
-                    onChange={handleInputChange}
+                    // onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 bg-[#141414] rounded-lg "
                     placeholder="Enter your first name"
@@ -53,7 +47,7 @@ export default function ContactForm() {
                     id="lastName"
                     name="lastName"
                     value={formData.lastName}
-                    onChange={handleInputChange}
+                    // onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 bg-[#141414] rounded-lg "
                     placeholder="Enter your last name"
@@ -70,7 +64,7 @@ export default function ContactForm() {
                   id="email"
                   name="email"
                   value={formData.email}
-                  onChange={handleInputChange}
+                  // onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 bg-[#141414] rounded-lg "
                   placeholder="Enter your email address"
@@ -86,7 +80,7 @@ export default function ContactForm() {
                   id="phoneNumber"
                   name="phoneNumber"
                   value={formData.phoneNumber}
-                  onChange={handleInputChange}
+                  // onChange={handleInputChange}
                   className="w-full px-4 py-3 bg-[#141414] rounded-lg "
                   placeholder="Enter your phone number"
                 />
@@ -100,7 +94,7 @@ export default function ContactForm() {
                   id="message"
                   name="message"
                   value={formData.message}
-                  onChange={handleInputChange}
+                  // onChange={handleInputChange}
                   required
                   rows={6}
                   className="w-full px-4 py-3 bg-[#141414] rounded-lg  resize-vertical"

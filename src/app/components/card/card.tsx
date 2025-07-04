@@ -1,10 +1,9 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import Image from 'next/image';
 
 // Type definitions
 interface ServiceCardProps {
-  icon: React.ReactNode;
+  icon: string;
   title: string;
   description: string;
   text?: boolean;
@@ -41,7 +40,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <div className="px-3">
         <div className={`w-16 h-16 bg-[#C6AE64]/20 mb-4  items-center flex justify-center ${text ? "" : ""} rounded-full transition-colors duration-300`}>
           <div className="rounded-full">
-            <Image alt='' src={icon}/>
+            <img alt='Service icon' src={icon} width={32} height={32} />
           </div>
         </div>
         </div>

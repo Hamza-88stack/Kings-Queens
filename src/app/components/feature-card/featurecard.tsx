@@ -2,9 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 // Type definitions
 interface FeatureItemProps {
-  icon: React.ReactNode;
+  icon: string ; // Change this to match Image src requirements
   title: string;
-  text:string;
+  text: string;
 }
 
 

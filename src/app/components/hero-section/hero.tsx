@@ -1,8 +1,10 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
+
 interface ServicesHeroSectionProps {
-  image?: React.ReactNode;
+  image?: string | StaticImport;  // Changed from React.ReactNode
   imageAlt?: string;
   subtitle?: string;
   title?: string;
@@ -27,7 +29,7 @@ const ServicesHeroSection: React.FC<ServicesHeroSectionProps> = ({
       {/* Content */}
       <div className="relative z-20 container mx-auto pl-4 flex flex-col md:flex-row items-center justify-between text-white">
         {/* Left Text Content */}
-        <div className="max-w-3xl text-left md:ml-10"> {/* Added margin-left for spacing from the edge */}
+        <div className="max-w-3xl text-left md:ml-10">
           <p className="text-sm uppercase font-[400] tracking-wider mb-2 text-gray-300">
             {subtitle}
           </p>
@@ -45,6 +47,8 @@ const ServicesHeroSection: React.FC<ServicesHeroSectionProps> = ({
           <Image
             src={image}
             alt={imageAlt}
+            width={400}  // Add required width
+            height={300} // Add required height
             quality={90}
             className="z-0"
           />
