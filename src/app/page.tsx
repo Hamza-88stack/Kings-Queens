@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Header from "./components/header/header";
 import ServicesSection from "./components/service-section/service-section";
 import FeaturesBanner from "./components/feature-section/featuresection";
@@ -7,8 +6,6 @@ import HowItWorksSection from "./components/howitworks/howitworks";
 import ReviewsSection from "./components/review-section/reviewsection";
 import PremiumLaundrySection from "./components/premiumlaundarysection/premiumlaundary";
 import FAQSection from "./components/faqs-section/faqssection";
-import LaundryHeroSection from "./components/hero-section/hero";
-import HeroSection from "./components/sub-hero-section/sub-hero-section";
 import Footer from "./components/footer/footer";
 import LogoCarousel from "./components/logo-carousel/logo-carousel";
 import SuperHeroSection from "./components/super-hero-section/section";

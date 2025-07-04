@@ -1,6 +1,4 @@
 "use client"
-import Image from "next/image";
-import ServiceCard from "../components/card/card";
 import ServicesHeroSection from "../components/hero-section/hero";
 import Lady from "@/Kings & Queens/women-selecting-clothes 1.svg"
 import Header from "../components/header/header";

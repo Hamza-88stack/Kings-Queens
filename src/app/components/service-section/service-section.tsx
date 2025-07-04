@@ -1,5 +1,5 @@
 "use client"
-import {  Image } from "lucide-react";
+import Image from "next/image";
 import ServiceCard from "../card/card";
 import Shirt from "@/Kings & Queens/5654.svg"
 import Wedding from "@/Kings & Queens/Vect123or.svg"
@@ -41,7 +41,7 @@ const ServicesSection = () => {
             <div className="container mx-auto px-4">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <h4 className="text-white text-sm font-[400]mb-2">
+                    <h4 className="text-white text-sm font-[400] mb-2">
                         Services
                     </h4>
                     <h2 className="text-white text-3xl md:text-4xl font-extralight">
@@ -68,7 +68,7 @@ const ServicesSection = () => {
                         <div className="bg-black rounded-full   w-[156px] text-center text-sm px-3 py-2">
                             <p className=' text-[#9D7439]'>See All Services</p>
                         </div>
-                        <Image className='w-[15px] h-[11px]' src={ArrowRight} />
+                        <Image className='w-[15px] h-[11px]' src={ArrowRight} alt="Arrow right" />
                     </div>
                 </div>
             </div>

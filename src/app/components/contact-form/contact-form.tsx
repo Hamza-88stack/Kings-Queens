@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -19,12 +19,6 @@ export default function ContactForm() {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add form submission logic here
-    alert('Form submitted successfully!');
-  };
 
   return (
     <div className="min-h-screen bg-[#484848]   text-white p-4">

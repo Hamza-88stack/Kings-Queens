@@ -11,14 +11,6 @@ interface ReviewCardProps {
     large?: boolean;
 }
 
-interface Review {
-    id: number;
-    rating: number;
-    title: string;
-    review: string;
-    customerName: string;
-    large: string;
-}
 
 
 // Star Rating Component

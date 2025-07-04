@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, ArrowRight } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 // Type definitions
 interface PricingCardProps {
@@ -11,15 +11,6 @@ interface PricingCardProps {
   buttonText?: string;
 }
 
-interface PricingPlan {
-  id: number;
-  planName: string;
-  price: string;
-  description: string;
-  features: string[];
-  isPopular?: boolean;
-  buttonText?: string;
-}
 
 // Reusable PricingCard Component
 const PricingCard: React.FC<PricingCardProps> = ({ 

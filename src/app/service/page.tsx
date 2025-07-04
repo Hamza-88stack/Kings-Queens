@@ -1,13 +1,9 @@
 "use client"
-import Image from "next/image";
 import ServiceCard from "../components/card/card";
-import PricingCard from "../components/pricing-card/pricingcard";
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
-import { ArrowRight } from "lucide-react";
 import Lady from "@/Kings & Queens/kings queen lady 1.svg"
 import PricingSection from "../components/pricing-section/pricingsection";
-import HeroSection from "../components/sub-hero-section/sub-hero-section";
 import ServicesHeroSection from "../components/hero-section/hero";
 
 const ServicesPage: React.FC = () => {

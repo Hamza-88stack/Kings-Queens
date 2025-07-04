@@ -7,11 +7,7 @@ interface FeatureItemProps {
   text:string;
 }
 
-interface Feature {
-  id: number;
-  icon: React.ReactNode;
-  title: string;
-}
+
 
 // Reusable FeatureItem Component
 const FeatureItem: React.FC<FeatureItemProps> = ({ icon, title , text}) => {

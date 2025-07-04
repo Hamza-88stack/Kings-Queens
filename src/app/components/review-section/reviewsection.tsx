@@ -5,7 +5,7 @@ const ReviewsSection: React.FC = () => {
             id: 1,
             rating: 3,
             title: "All stains gone, good as new",
-            review: "I recently started using this dry cleaning service, and I’m genuinely impressed. From the moment I booked my first pickup, everything was smooth, professional, and incredibly convenient. The user-friendly interface made it easy to schedule a time that suited my busy week—even late evenings and weekends            The pickup was right on time, and the staff was courteous and efficient. They confirmed everything clearly and made me feel confident that my clothes were in good hands. I had a mix of delicate fabrics, formal wear, and everyday items, and every single piece came back spotless, perfectly pressed, and smelling fresh without any overpowering scent. Even my white shirts looked brand new—something no other service has managed consistently.What really stood out was the attention to detail. My clothes were returned neatly folded or hung.            Overall, this dry cleaning service has taken a chore off my plate and added.",
+            review: "I recently started using this dry cleaning service, and I&apos;m genuinely impressed. From the moment I booked my first pickup, everything was smooth, professional, and incredibly convenient. The user-friendly interface made it easy to schedule a time that suited my busy week—even late evenings and weekends            The pickup was right on time, and the staff was courteous and efficient. They confirmed everything clearly and made me feel confident that my clothes were in good hands. I had a mix of delicate fabrics, formal wear, and everyday items, and every single piece came back spotless, perfectly pressed, and smelling fresh without any overpowering scent. Even my white shirts looked brand new—something no other service has managed consistently.What really stood out was the attention to detail. My clothes were returned neatly folded or hung.            Overall, this dry cleaning service has taken a chore off my plate and added.",
             customerName: "David Callahan"
         },
         {
@@ -42,7 +42,7 @@ const ReviewsSection: React.FC = () => {
                         Reviews
                     </h4>
                     <h2 className="text-white text-3xl md:text-4xl font-extralight">
-                        We've helped over 130,000 others re-claim their time.
+                        We&apos;ve helped over 130,000 others re-claim their time.
                     </h2>
                 </div>
 

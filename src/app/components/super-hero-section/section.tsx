@@ -1,23 +1,19 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
- 
+import { StaticImageData } from 'next/image';
 
 
 // --- Component Props Interface ---
 interface SuperHeroSectionProps {
-  image?: any; // Use `any` for flexibility with Next.js Image src (string or StaticImageData)
+  image?: string | StaticImageData; // Proper typing for Next.js Image src
   imageAlt?: string;
-  subtitle?: string; // e.g., "Expert Dry Cleaners Free 24hr Delivery"
-  title?: string;    // e.g., "LAUNDRY FOR THOSE WHO HATE SURPRISES"
 }
 
 // --- The Hero Section Component ---
 const SuperHeroSection: React.FC<SuperHeroSectionProps> = ({
   image,
   imageAlt = "Man holding clean laundry",
-  subtitle = "Expert Dry Cleaners Free 24hr Delivery",
-  title = "LAUNDRY FOR THOSE WHO HATE SURPRISES",
 }) => {
    
   return (

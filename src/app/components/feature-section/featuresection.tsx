@@ -31,7 +31,7 @@ const FeaturesBanner: React.FC = () => {
         <div className="bg-[#141414]">
             <div className="container mx-auto px-4 py-10">
                 <div className="flex flex-col md:flex-row items-center justify-center md:justify-around space-y-4 px-8 md:space-y-0">
-                    {features.map((feature, index) => (
+                    {features.map((feature) => (
                         <React.Fragment key={feature.id}>
                             <FeatureItem
                                 icon={feature.icon}

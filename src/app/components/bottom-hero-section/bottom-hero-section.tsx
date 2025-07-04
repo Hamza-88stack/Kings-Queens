@@ -2,20 +2,15 @@
 import React from 'react';
 import Image from 'next/image';
 import ArrowRight from "@/Kings & Queens/arrow.svg"
+
 interface BottomHeroSectionProps {
   image?: React.ReactNode;
   imageAlt?: string;
-  subtitle?: string;
-  title?: string;
-  breadcrumbCurrent?: string;
 }
 
 const BottomHeroSection: React.FC<BottomHeroSectionProps> = ({ 
   image, 
   imageAlt = "Hero image", 
-  subtitle, 
-  title,
-  breadcrumbCurrent
 }) => {
   return (
     <section className="relative w-full min-h-[400px] flex items-center rounded-xl bg-gradient-to-br from-[#C6AE64] to-[#9C7238] justify-center overflow-hidden">
@@ -44,7 +39,7 @@ const BottomHeroSection: React.FC<BottomHeroSectionProps> = ({
             <div className="bg-black rounded-full   w-[119px] text-center text-sm px-3 py-2">
               <p className=' text-[#9D7439]'>Contact Us</p>  
             </div>
-            <Image className='w-[15px] h-[11px]' src={ArrowRight}/>
+            <Image className='w-[15px] h-[11px]' src={ArrowRight} alt="Arrow pointing right" />
            </div>
           </div>
         </div>

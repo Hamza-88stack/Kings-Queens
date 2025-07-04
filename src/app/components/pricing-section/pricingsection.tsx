@@ -1,6 +1,6 @@
 "use client"
 
-import {  Image } from "lucide-react";
+import Image from "next/image";
 import PricingCard from "../pricing-card/pricingcard";
 import ArrowRight from "@/Kings & Queens/arrow.svg"
 
@@ -97,7 +97,7 @@ const PricingSection: React.FC = () => {
             <div className="bg-black rounded-full   w-[171px] text-center text-sm px-3 py-2">
               <p className=' text-[#9D7439]'>View Full Pricelist</p>  
             </div>
-            <Image className='w-[15px] h-[11px]' src={ArrowRight}/>
+            <Image className='w-[15px] h-[11px]' src={ArrowRight} alt="Arrow right" />
            </div>
          </div>
       </div>

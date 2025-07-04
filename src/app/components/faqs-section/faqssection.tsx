@@ -16,7 +16,7 @@ const FAQSection = () => {
     },
     {
       question: "How do I receive my chart after purchase?",
-      answer: "After completing your purchase, you'll receive an email with download links to your charts. The files will be available for download immediately and you can access them from your account dashboard."
+      answer: "After completing your purchase, you&apos;ll receive an email with download links to your charts. The files will be available for download immediately and you can access them from your account dashboard."
     },
     {
       question: "What file formats do the charts come in?",
@@ -41,7 +41,7 @@ const FAQSection = () => {
             FAQs
           </p>
           <h2 className="text-3xl md:text-4xl font-light leading-tight">
-            We're here to help with all your questions and answers in one place.
+            We&apos;re here to help with all your questions and answers in one place.
           </h2>
         </div>
 

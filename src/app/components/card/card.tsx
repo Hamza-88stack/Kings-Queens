@@ -13,14 +13,6 @@ interface ServiceCardProps {
   onButtonClick?: () => void;
 }
 
-interface Service {
-  id: number;
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  text?: boolean;
-}
-
 // Reusable ServiceCard Component
 const ServiceCard: React.FC<ServiceCardProps> = ({ 
   icon, 
