@@ -20,13 +20,13 @@ const SuperHeroSection: React.FC<SuperHeroSectionProps> = ({
     <section className="relative w-full      flex items-center bg-gradient-to-br from-[#C6AE64] to-[#9C7238] justify-center overflow-hidden rounded-xl">
       <div className="absolute inset-0">
         {/* Overlay for gradient effect and text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/1 to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/1 to-transparent z-10"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 flex flex-col lg:flex-row items-center justify-center lg:justify-between text-white gap-12">
 
         {/* Left Content: Text & Form */}
-        <div className="lg:w-1/2 max-w-lg text-center lg:text-left flex flex-col items-center lg:items-start pt-20">
+        <div className="lg:w-1/2 max-w-lg text-center lg:text-left flex flex-col items-center lg:items-start pt-10 pl-5">
           <h1 className="text-5xl   font-[100] uppercase leading-tight max-w-md">
             LAUNDRY FOR THOSE WHO HATE <span className='font-[400]'>SURPRISES</span>
           </h1>
@@ -51,7 +51,7 @@ const SuperHeroSection: React.FC<SuperHeroSectionProps> = ({
           </div>
 
           {/* Trustpilot Review */}
-          <div className="mt-6 flex items-center justify-center lg:justify-start gap-3">
+          <div className="mt-6 flex items-center justify-center lg:justify-start gap-3 pt-10">
             <p className="font-[200] text-sm">Excellent</p>
             <div className="flex items-center text-white">
               {/* Using inline SVG for stars for better quality */}

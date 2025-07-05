@@ -34,10 +34,10 @@ const FAQSection = () => {
 
   return (
     <section className="bg-black text-white px-4">
-      <div className=" mx-auto">
+      <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-white text-sm font-[400] mb-4">
+          <p className="text-white text-lg font-[400] mb-4">
             FAQs
           </p>
           <h2 className="text-3xl md:text-4xl font-light leading-tight">

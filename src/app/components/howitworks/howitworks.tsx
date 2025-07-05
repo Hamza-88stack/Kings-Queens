@@ -37,7 +37,7 @@ const HowItWorksSection: React.FC = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h4 className="text-white text-sm font-[400] mb-2">
+          <h4 className="text-white text-lg font-[400] mb-2">
             How It Works
           </h4>
           <h2 className="text-white text-3xl md:text-4xl font-extralight">

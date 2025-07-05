@@ -15,12 +15,20 @@ import Table from "@/Kings & Queens/image 1.svg"
 export default function Home() {
   return (
     <div className="  bg-black ">
-      <Header /> 
-      <SuperHeroSection image={Man} />
-      <LogoCarousel />
-      <div className="px-10">
+
+      <div className="px-16">
+        <Header />
+        <div className="mt-4">
+          <SuperHeroSection image={Man} />
+        </div>
+        <div className="mb-10 mt-16">
+        <LogoCarousel />
+        </div>
         <ServicesSection />
-        <FeaturesBanner />
+      </div>
+
+      <FeaturesBanner />
+      <div className="px-16">
         <PricingSection />
         <HowItWorksSection />
         <ReviewsSection />
@@ -34,8 +42,10 @@ export default function Home() {
         buttonText="Book Your Service"
         heroImage="/path-to-your-folded-clothes-image.jpg"
       /> */}
+      <div className="my-20">
+        <BottomHeroSection image={Table} />
+        </div>
       </div>
-      <BottomHeroSection image={Table}/>
       <Footer />
     </div>
   );

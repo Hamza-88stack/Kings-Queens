@@ -34,11 +34,11 @@ const ReviewsSection: React.FC = () => {
     
 
     return (
-        <section className="bg-black py-16">
+       <section className="bg-black py-16">
             <div className="container mx-auto px-4">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <h4 className="text-white text-sm font-[400] mb-2">
+                    <h4 className="text-white text-lg font-[400] mb-2">
                         Reviews
                     </h4>
                     <h2 className="text-white text-3xl md:text-4xl font-extralight">
@@ -47,21 +47,25 @@ const ReviewsSection: React.FC = () => {
                 </div>
 
                 {/* Reviews Layout */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
                     {/* Left - Large Review (takes full height) */}
-                    <div className="lg:row-span-2">
+                    <div className="lg:row-span-2 h-full">
                         <ReviewCard {...reviews[0]} large />
                     </div>
 
                     {/* Right Top - Single Review */}
-                    <div>
+                    <div className="h-full">
                         <ReviewCard {...reviews[1]} />
                     </div>
 
                     {/* Right Bottom - Two Reviews Side by Side */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <ReviewCard {...reviews[2]} />
-                        <ReviewCard {...reviews[3]} />
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 h-full">
+                        <div className="h-full">
+                            <ReviewCard {...reviews[2]} />
+                        </div>
+                        <div className="h-full">
+                            <ReviewCard {...reviews[3]} />
+                        </div>
                     </div>
                 </div>
             </div>

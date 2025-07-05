@@ -38,10 +38,10 @@ const ServicesSection = () => {
 
     return (
         <section className="bg-black py-16">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto ">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <h4 className="text-white text-sm font-[400] mb-2">
+                    <h4 className="text-white text-lg font-[400] mb-2">
                         Services
                     </h4>
                     <h2 className="text-white text-3xl md:text-4xl font-extralight">
@@ -63,13 +63,15 @@ const ServicesSection = () => {
                 </div>
 
                 {/* See All Services Button */}
-                <div className="bg-gradient-to-b  from-[#C6AE64] text-center  to-[#9C7238] w-[189px] py-[2px] pl-[2px] rounded-full mt-6">
+                <div className="text-center flex justify-center">
+                <div className="bg-gradient-to-b  from-[#C6AE64] text-center  to-[#9C7238] w-[189px] py-[2px] pl-[2px] rounded-full mt-3">
                     <div className="flex gap-2 items-center">
                         <div className="bg-black rounded-full   w-[156px] text-center text-sm px-3 py-2">
                             <p className=' text-[#9D7439]'>See All Services</p>
                         </div>
                         <Image className='w-[15px] h-[11px]' src={ArrowRight} alt="Arrow right" />
                     </div>
+                </div>
                 </div>
             </div>
         </section>

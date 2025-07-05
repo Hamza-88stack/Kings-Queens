@@ -25,7 +25,7 @@ const PremiumLaundrySection = () => {
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <p className="text-white text-sm font-[400] mb-4">
+                    <p className="text-white text-lg font-[400] mb-4">
                         About Us
                     </p>
                     <h2 className="text-white text-3xl md:text-4xl font-extralight">

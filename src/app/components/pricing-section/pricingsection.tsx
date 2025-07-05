@@ -67,7 +67,7 @@ const PricingSection: React.FC = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h4 className="text-white text-sm font-[400] mb-2 ">
+          <h4 className="text-white text-lg font-[400] mb-2 ">
             Clear Pricing
           </h4>
           <h2 className="text-white text-3xl md:text-4xl font-extralight">
@@ -91,14 +91,15 @@ const PricingSection: React.FC = () => {
         </div>
 
         {/* View Full Pricing Button */}
-          
-          <div className="text-center bg-gradient-to-b  from-[#C6AE64]  to-[#9C7238] w-[203px] py-[2px] pl-[2px] rounded-full mt-6">
+          <div className="flex justify-center">
+          <div className="text-center bg-gradient-to-b  from-[#C6AE64]  to-[#9C7238] w-[203px] py-[2px] pl-[2px] rounded-full mt-2">
            <div className="flex gap-2 items-center">
             <div className="bg-black rounded-full   w-[171px] text-center text-sm px-3 py-2">
               <p className=' text-[#9D7439]'>View Full Pricelist</p>  
             </div>
             <Image className='w-[15px] h-[11px]' src={ArrowRight} alt="Arrow right" />
            </div>
+         </div>
          </div>
       </div>
     </section>
