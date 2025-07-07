@@ -19,55 +19,56 @@ export default function Home() {
       {/* Container with consistent responsive padding */}
       <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
         <Header />
-        
+
         {/* Hero Section */}
         <section className="mt-6 sm:mt-8 md:mt-10 lg:mt-12">
           <SuperHeroSection image={Man} />
         </section>
 
         {/* Logo Carousel */}
-        <section className="mt-12 sm:mt-16 md:mt-20 lg:mt-24 mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-          <LogoCarousel />
-        </section>
+        <div className="max-w-7xl">
+          <section className="mt-12 sm:mt-16 md:mt-20 lg:mt-24 mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+            <LogoCarousel />
+          </section>
 
-        {/* Services Section */}
+          {/* Services Section */}
+          <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+            <ServicesSection />
+          </section>
+        </div>
+
+        {/* Full-width Features Banner */}
         <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-          <ServicesSection />
-        </section>
-      </div>
-
-      {/* Full-width Features Banner */}
-      <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-        <FeaturesBanner />
-      </section>
-
-      {/* Container for middle sections */}
-      <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
-        {/* Pricing Section */}
-        <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-          <PricingSection />
+          <FeaturesBanner />
         </section>
 
-        {/* How It Works Section */}
-        <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-          <HowItWorksSection />
-        </section>
+        {/* Container for middle sections */}
+        <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+          {/* Pricing Section */}
+          <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+            <PricingSection />
+          </section>
 
-        {/* Reviews Section */}
-        <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-          <ReviewsSection />
-        </section>
+          {/* How It Works Section */}
+          <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+            <HowItWorksSection />
+          </section>
 
-        {/* Premium Laundry Section */}
-        <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-          <PremiumLaundrySection />
-        </section>
+          {/* Reviews Section */}
+          <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+            <ReviewsSection />
+          </section>
 
-        {/* FAQ Section */}
-        <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-          <FAQSection />
-        </section>
+          {/* Premium Laundry Section */}
+          <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+            <PremiumLaundrySection />
+          </section>
 
+          {/* FAQ Section */}
+          <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+            <FAQSection />
+          </section>
+        </div>
         {/* Bottom Hero Section */}
         <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
           <BottomHeroSection image={Table} />

@@ -28,7 +28,7 @@ const logosToDisplay = [...uniqueLogos, ...uniqueLogos];
 
 const LogoCarousel = () => {
     return (
-        <div className="w-full bg-black  overflow-hidden">
+        <div className="w-full bg-black overflow-hidden py-12 flex items-center justify-center">
             <style jsx>{`
                 @keyframes scroll-logos {
                     0% {
@@ -48,9 +48,9 @@ const LogoCarousel = () => {
             `}</style>
             {/* The outer div is the clipping mask (overflow-hidden).
                 The inner div 'flex w-fit animate-scroll' is the one that actually scrolls. */}
-            <div className="flex w-fit animate-scroll"> {/* This is the div that will be animated */}
+            <div className="flex w-fit animate-scroll items-center"> {/* This is the div that will be animated */}
                 {logosToDisplay.map((logo, index) => (
-                    <div key={index} className="flex-shrink-0 mx-8">
+                    <div key={index} className="flex-shrink-0 mx-8 flex items-center justify-center">
                         <Image 
                             alt='Service icon' 
                             src={logo} 
