@@ -14,7 +14,7 @@ const LaundrySection = () => {
                     <div className='col-span-2 bg-[#141414] p-8 rounded-lg flex flex-col justify-between'> 
                         <h2 className="text-4xl lg:text-5xl font-[400] mb-6">Kings & Queens: Your trusted laundry partner</h2>
                         <p className="text-lg leading-relaxed text-white">
-                            Is your go-to laundry solution, dedicated to delivering unmatched convenience, exceptional care, and spotless cleanliness. We understand that your time is valuable, and so is your wardrobe. That's why FreshFab offers a seamless laundry experience tailored to your lifestyle. From everyday wear to delicate fabrics, our trained professionals treat every garment with precision and care, using industry-leading technology and eco-friendly cleaning methods to ensure the highest standards of hygiene and freshness.
+                            Is your go-to laundry solution, dedicated to delivering unmatched convenience, exceptional care, and spotless cleanliness. We understand that your time is valuable, and so is your wardrobe. That&apos;s why FreshFab offers a seamless laundry experience tailored to your lifestyle. From everyday wear to delicate fabrics, our trained professionals treat every garment with precision and care, using industry-leading technology and eco-friendly cleaning methods to ensure the highest standards of hygiene and freshness.
                         </p>
                     </div>
 

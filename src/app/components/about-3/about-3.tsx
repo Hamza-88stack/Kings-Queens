@@ -22,7 +22,7 @@ const ServiceDetailsSection = () => {
             <div>
               <h3 className="text-3xl font-[400] mb-4">Pickup & Delivery at Your Command</h3>
               <p className="text-base leading-relaxed text-white font-[200]">
-                Is your go-to laundry solution, dedicated to delivering unmatched convenience, exceptional care, and spotless cleanliness. We understand that your time is valuable, and so is your wardrobe. That's why FreshFab offers a seamless laundry experience tailored to your lifestyle. From everyday wear to delicate fabrics, our trained professionals treat every garment with precision and care, using industry-leading technology and eco-friendly cleaning methods to ensure the highest standards of hygiene and freshness.
+                Is your go-to laundry solution, dedicated to delivering unmatched convenience, exceptional care, and spotless cleanliness. We understand that your time is valuable, and so is your wardrobe. That&apos;s why FreshFab offers a seamless laundry experience tailored to your lifestyle. From everyday wear to delicate fabrics, our trained professionals treat every garment with precision and care, using industry-leading technology and eco-friendly cleaning methods to ensure the highest standards of hygiene and freshness.
               </p>
             </div>
           </div>
@@ -41,7 +41,7 @@ const ServiceDetailsSection = () => {
             <div className="bg-[#141414] p-6 rounded-md flex-grow" style={{ flexBasis: '60%' }}>
               <h3 className="text-3xl font-[400] mb-4">Where Cleanliness Meets Class</h3>
               <p className="text-base leading-relaxed text-white font-[200]">
-                Kings & Queens Laundry isn't just about clean clothes, it's about a superior laundry experience. Elevate your laundry routine with a premium service that fits your lifestyle.
+                Kings & Queens Laundry isn&apos;t just about clean clothes, it&apos;s about a superior laundry experience. Elevate your laundry routine with a premium service that fits your lifestyle.
               </p>
             </div>
           </div>
@@ -53,7 +53,7 @@ const ServiceDetailsSection = () => {
               <div>
                 <h3 className="text-3xl font-[400] mb-4">Eco-Friendly, Fabric-Safe, Always</h3>
                 <p className="text-base leading-relaxed text-white font-[200]">
-                  Is your go-to laundry solution, dedicated to delivering unmatched convenience, exceptional care, and spotless cleanliness. We understand that you time is valuable, and so is your wardrobe. That's why FreshFab offers a seamless laundry experience tailored to your lifestyle. From everyday wear to delicate fabrics, our trained professionals treat every garment with precision and care, using industry-leading.
+                  Is your go-to laundry solution, dedicated to delivering unmatched convenience, exceptional care, and spotless cleanliness. We understand that you time is valuable, and so is your wardrobe. That&apos;s why FreshFab offers a seamless laundry experience tailored to your lifestyle. From everyday wear to delicate fabrics, our trained professionals treat every garment with precision and care, using industry-leading.
                 </p>
               </div>
             </div>
