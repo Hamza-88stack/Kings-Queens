@@ -22,7 +22,7 @@ const services = [
 const PremiumLaundrySection = () => {
     return (
         <section className="bg-black text-white  ">
-            <div className="  mx-auto">
+            <div className=" container  mx-auto">
                 {/* Header */}
                 <div className="text-center mb-16">
                     <p className="text-white text-lg font-[400] mb-4">
