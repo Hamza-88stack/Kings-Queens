@@ -23,7 +23,7 @@ const ServicesHeroSection: React.FC<ServicesHeroSectionProps> = ({
       {/* Background Image */}
       <div className="absolute inset-0">
         {/* Overlay for gradient effect and text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/1 to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/1 to-transparent z-10"></div>
       </div>
 
       {/* Content */}
@@ -48,7 +48,7 @@ const ServicesHeroSection: React.FC<ServicesHeroSectionProps> = ({
             src={image}
             alt={imageAlt}
             width={400}  // Add required width
-            height={300} // Add required height
+            height={250} // Add required height
             quality={90}
             className="z-0"
           />

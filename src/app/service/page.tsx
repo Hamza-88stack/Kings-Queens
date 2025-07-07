@@ -3,83 +3,93 @@ import ServiceCard from "../components/card/card";
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
 import Lady from "@/Kings & Queens/kings queen lady 1.svg"
-import Bus from "@/Kings & Queens/Group 15.svg"
 import PricingSection from "../components/pricing-section/pricingsection";
 import ServicesHeroSection from "../components/hero-section/hero";
+import Shirt from "@/Kings & Queens/5654.svg"
+import Wedding from "@/Kings & Queens/Vect123or.svg"
+import Shoes from "@/Kings & Queens/Vector (1).svg"
+import Something from "@/Kings & Queens/Group 15.svg"
+import Dry from "@/Kings & Queens/Kings & Queens/Group 71.svg"
+import HouseHold from "@/Kings & Queens/Kings & Queens/Union-1.svg"
+import Bed from "@/Kings & Queens/Kings & Queens/Union-2.svg"
+import Curtain from "@/Kings & Queens/Kings & Queens/Union-3.svg"
+import Repairs from "@/Kings & Queens/Kings & Queens/Union.svg"
+import Ironing from "@/Kings & Queens/Kings & Queens/Union.svg"
+import BottomHeroSection from "../components/bottom-hero-section/bottom-hero-section";
+import Table from "@/Kings & Queens/image 1.svg"
 
 const ServicesPage: React.FC = () => {
     // Service data with proper icons (8 services)
     const services = [
         {
             id: 1,
-            icon:Bus ,
+            icon: Shirt,
             title: "Shirt Service",
             description: "Beautifully cleaned and crisply pressed shirts. Returned on hangers or folded"
         },
         {
             id: 2,
-            icon:Bus ,
+            icon: Wedding,
             title: "Laundry Services",
-            description: "Revitalize washing your complete laundry and finish as well laundering of all garments"
+            description: "Service washes, wash, tumble dry and fold, as well Laundering and pressing"
         },
         {
             id: 3,
-            icon:Bus ,
+            icon: Shoes,
             title: "Wedding Dresses",
-            description: "Carefully cleaned, restored and preserved to keep your special moments"
+            description: "Beautifully cleaned, restored and preserved to keep forever"
         },
         {
             id: 4,
-            icon:Bus ,
-            title: "Curtain Cleaning",
-            description: "Professional curtain cleaning and pressing services for your home"
+            icon: Something,
+            title: "Shoe Cleaning",
+            description: "Professional shoe cleaning, zip repairs, rubber sole replacements and more"
         },
         {
             id: 5,
-            icon:Bus ,
+            icon: Dry,
             title: "Dry Cleaning",
-            description: "Expert dry cleaning for delicate fabrics and special garments"
+            description: "Blouses, bow ties, knitwear, coats, dinner suits, dresses, gloves & more"
         },
         {
             id: 6,
-            icon:Bus ,
+            icon: HouseHold,
             title: "Household Textiles",
-            description: "Complete care for curtains, bedding, and other home textiles"
+            description: "Service washes, wash, tumble dry and fold, as well Laundering and pressing"
         },
         {
             id: 7,
-            icon:Bus ,
+            icon: Bed,
             title: "Duvet & Bed Linen",
-            description: "Specialized cleaning for bedding, duvets, and luxury linens"
+            description: "Service washes, wash, tumble dry and fold, as well Laundering and pressing"
         },
         {
             id: 8,
-            icon:Bus ,
+            icon: Curtain,
             title: "Curtain Cleaning",
-            description: "Professional curtain cleaning and pressing services"
+            description: "Service washes, wash, tumble dry and fold, as well Laundering and pressing"
         },
         {
             id: 9,
-            icon:Bus ,
+            icon: Repairs,
             title: "Repairs",
-            description: "Expert alterations and repair services for damaged garments"
+            description: "Blouses, bow ties, knitwear, coats, dinner suits, dresses, gloves & more"
         },
         {
             id: 10,
-            icon: <div className="w-8 h-8 bg-[#C6AE64] rounded-full flex items-center justify-center text-black font-bold">🔥</div>,
+            icon: Ironing,
             title: "Ironing",
-            description: "Professional ironing and pressing for a crisp, clean finish"
+            description: "Service washes, wash, tumble dry and fold, as well Laundering and pressing"
         }
     ];
-
     // Main services for display (first 8)
-    const mainServices = services.slice(0, 8);
-    
+    const mainServices = services.slice(0, 10);
+
     // Featured services for bottom section (first 4)
     const featuredServices = services.slice(0, 4);
 
     // Pricing plans
-    
+
 
     const handleOrderClick = (serviceTitle: string) => {
         console.log(`Order clicked for: ${serviceTitle}`);
@@ -87,11 +97,12 @@ const ServicesPage: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white">
-            <Header />
-            
-            {/* Hero Section */}
-            <ServicesHeroSection
+        <div className="min-h-screen bg-black text-white ">
+            <div className="px-20">
+                <Header />
+
+                {/* Hero Section */}
+                <ServicesHeroSection
                     image={
                         Lady}
                     imageAlt="Woman holding laundry basket"
@@ -100,52 +111,54 @@ const ServicesPage: React.FC = () => {
                     breadcrumbCurrent="Services"
                 />
 
-            {/* Services Grid Section */}
-            <section className="py-16">
-                <div className="container mx-auto px-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {mainServices.map((service) => (
-                            <ServiceCard
-                                key={service.id}
-                                icon={service.icon}
-                                title={service.title}
-                                description={service.description}
-                                onButtonClick={() => handleOrderClick(service.title)}
-                            />
-                        ))}
+                {/* Services Grid Section */}
+                <section className="py-16">
+                    <div className="container mx-auto px-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {mainServices.map((service) => (
+                                <ServiceCard
+                                    key={service.id}
+                                    icon={service.icon}
+                                    title={service.title}
+                                    description={service.description}
+                                    onButtonClick={() => handleOrderClick(service.title)}
+                                />
+                            ))}
+                        </div>
                     </div>
+                </section>
+
+                {/* Featured Services Section */}
+                <section className="py-16">
+                    <div className="container mx-auto px-6">
+                        <div className="text-center mb-12">
+                            <p className="text-[#ffffff] text-lg mb-2">Our Services</p>
+                            <h2 className="text-white text-2xl lg:text-3xl font-light">
+                                These are the services we are providing
+                            </h2>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {featuredServices.map((service) => (
+                                <ServiceCard
+                                    key={`featured-${service.id}`}
+                                    icon={service.icon}
+                                    title={service.title}
+                                    description={service.description}
+                                    onButtonClick={() => handleOrderClick(service.title)}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Pricing Section */}
+                <PricingSection />
+
+                {/* Bottom CTA Section */}
+                <div className="my-20">
+                    <BottomHeroSection image={Table} />
                 </div>
-            </section>
-
-            {/* Featured Services Section */}
-            <section className="py-16">
-                <div className="container mx-auto px-6">
-                    <div className="text-center mb-12">
-                        <p className="text-[#C6AE64] text-sm mb-2">Our Services</p>
-                        <h2 className="text-white text-2xl lg:text-3xl font-light">
-                            These are the services we are providing
-                        </h2>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {featuredServices.map((service) => (
-                            <ServiceCard
-                                key={`featured-${service.id}`}
-                                icon={service.icon}
-                                title={service.title}
-                                description={service.description}
-                                onButtonClick={() => handleOrderClick(service.title)}
-                            />
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Pricing Section */}
-             <PricingSection/>
-
-            {/* Bottom CTA Section */}
-            
-
+            </div>
             <Footer />
         </div>
     );

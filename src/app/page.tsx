@@ -12,40 +12,69 @@ import SuperHeroSection from "./components/super-hero-section/section";
 import Man from "@/Kings & Queens/Group 197.svg"
 import BottomHeroSection from "./components/bottom-hero-section/bottom-hero-section";
 import Table from "@/Kings & Queens/image 1.svg"
+
 export default function Home() {
   return (
-    <div className="  bg-black ">
-
-      <div className="px-16">
+    <div className="bg-black">
+      {/* Container with consistent responsive padding */}
+      <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
         <Header />
-        <div className="mt-4">
+        
+        {/* Hero Section */}
+        <section className="mt-6 sm:mt-8 md:mt-10 lg:mt-12">
           <SuperHeroSection image={Man} />
-        </div>
-        <div className="mb-10 mt-16">
-        <LogoCarousel />
-        </div>
-        <ServicesSection />
+        </section>
+
+        {/* Logo Carousel */}
+        <section className="mt-12 sm:mt-16 md:mt-20 lg:mt-24 mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+          <LogoCarousel />
+        </section>
+
+        {/* Services Section */}
+        <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+          <ServicesSection />
+        </section>
       </div>
 
-      <FeaturesBanner />
-      <div className="px-16">
-        <PricingSection />
-        <HowItWorksSection />
-        <ReviewsSection />
-        <PremiumLaundrySection />
-        <FAQSection />
-        {/* <HeroSection
-        logoText="Dry Cleaner"
-        title="The best Dry Cleaning delivered directly to your door"
-        subtitle="Premium dry cleaning service"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-        buttonText="Book Your Service"
-        heroImage="/path-to-your-folded-clothes-image.jpg"
-      /> */}
-      <div className="my-20">
-        <BottomHeroSection image={Table} />
-        </div>
+      {/* Full-width Features Banner */}
+      <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+        <FeaturesBanner />
+      </section>
+
+      {/* Container for middle sections */}
+      <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+        {/* Pricing Section */}
+        <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+          <PricingSection />
+        </section>
+
+        {/* How It Works Section */}
+        <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+          <HowItWorksSection />
+        </section>
+
+        {/* Reviews Section */}
+        <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+          <ReviewsSection />
+        </section>
+
+        {/* Premium Laundry Section */}
+        <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+          <PremiumLaundrySection />
+        </section>
+
+        {/* FAQ Section */}
+        <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+          <FAQSection />
+        </section>
+
+        {/* Bottom Hero Section */}
+        <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+          <BottomHeroSection image={Table} />
+        </section>
       </div>
+
+      {/* Footer - typically full width */}
       <Footer />
     </div>
   );

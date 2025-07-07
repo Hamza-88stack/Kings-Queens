@@ -37,7 +37,7 @@ const Header = () => {
             <Link href="/about" className="text-white hover:font-[400] transition-colors duration-300 font-[200]">
               About
             </Link>
-            <Link href="/services" className="text-white hover:font-[400] transition-colors duration-300 font-[200]">
+            <Link href="/service" className="text-white hover:font-[400] transition-colors duration-300 font-[200]">
               Services
             </Link>
             <Link href="/pricing" className="text-white hover:font-[400] transition-colors duration-300 font-[200]">

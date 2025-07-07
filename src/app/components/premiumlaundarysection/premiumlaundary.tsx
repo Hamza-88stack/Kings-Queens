@@ -21,8 +21,8 @@ const services = [
 ];
 const PremiumLaundrySection = () => {
     return (
-        <section className="bg-black text-white py-16 px-4">
-            <div className="max-w-7xl mx-auto">
+        <section className="bg-black text-white  ">
+            <div className="  mx-auto">
                 {/* Header */}
                 <div className="text-center mb-16">
                     <p className="text-white text-lg font-[400] mb-4">
@@ -37,9 +37,9 @@ const PremiumLaundrySection = () => {
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
                     {/* Left Side - Image */}
                     <div className="relative">
-                        <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg overflow-hidden aspect-[4/3]">
+                        <div className="  rounded-lg overflow-hidden aspect-[4/3]">
                             <div className="">
-                                <Image alt='' src={Picture} />
+                                <Image alt='' width={700} src={Picture} />
                             </div>
                         </div>
                     </div>
@@ -57,19 +57,19 @@ const PremiumLaundrySection = () => {
                             {/* Features List */}
                             <div className="space-y-4 font-200">
                                 <div className="flex items-center space-x-3">
-                                    <div className={`w-5 h-5 rounded-full flex items-center justify-center mr-3 bg-[#C6AE64]`}>
+                                    <div className={`w-5 h-5 rounded-full flex items-center justify-center mr-3 bg-gradient-to-br from-[#C6AE64] to-[#9C7238]`}>
                                         <Check className={`w-3 h-3  text-black`} />
                                     </div>
                                     <span className="text-gray-300">Eco-Friendly Products</span>
                                 </div>
                                 <div className="flex items-center space-x-3">
-                                    <div className={`w-5 h-5 rounded-full flex items-center justify-center mr-3 bg-[#C6AE64]`}>
+                                    <div className={`w-5 h-5 rounded-full flex items-center justify-center mr-3 bg-gradient-to-br from-[#C6AE64] to-[#9C7238]`}>
                                         <Check className={`w-3 h-3  text-black`} />
                                     </div>
                                     <span className="text-gray-300">Energy-Efficient Technology</span>
                                 </div>
                                 <div className="flex items-center space-x-3">
-                                    <div className={`w-5 h-5 rounded-full flex items-center justify-center mr-3 bg-[#C6AE64]`}>
+                                    <div className={`w-5 h-5 rounded-full flex items-center justify-center mr-3 bg-gradient-to-br from-[#C6AE64] to-[#9C7238]`}>
                                         <Check className={`w-3 h-3  text-black`} />
                                     </div>
                                     <span className="text-gray-300">Water Conservation & Recycling</span>
