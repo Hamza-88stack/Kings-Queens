@@ -4,7 +4,7 @@ import React from 'react';
 const ServiceDetailsSection = () => {
   return (
     <section className="bg-black text-white ">
-      <div className=" mx-auto">
+      <div className="container mx-auto">
 
         {/* Royal Care Header */}
         <div className="text-center mb-12">

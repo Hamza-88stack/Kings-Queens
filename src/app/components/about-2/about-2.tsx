@@ -6,7 +6,7 @@ import { Check } from 'lucide-react';
 const SustainabilitySection = () => {
     return (
         <section className="bg-black text-white ">
-            <div className=" mx-auto flex flex-col lg:flex-row gap-8 ">
+            <div className="container mx-auto flex flex-col lg:flex-row gap-8 ">
 
                 {/* Left Content Column */}
                 <div className="lg:w-1/2 flex flex-col space-y-8">

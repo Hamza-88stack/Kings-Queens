@@ -5,7 +5,7 @@ import Small from "@/Kings & Queens/Group 100.svg"
 const LaundrySection = () => {
     return (
         <section className="bg-black text-white ">
-            <div className="  mx-auto flex flex-col gap-6"> {/* Main container, now a column flexbox */}
+            <div className="container  mx-auto flex flex-col gap-6"> {/* Main container, now a column flexbox */}
 
                 {/* TOP ROW: First 3 divs */}
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6"> {/* This row will contain 3 items */}
