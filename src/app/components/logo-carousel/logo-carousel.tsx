@@ -28,7 +28,7 @@ const logosToDisplay = [...uniqueLogos, ...uniqueLogos];
 
 const LogoCarousel = () => {
     return (
-        <div className="w-full bg-black overflow-hidden py-12 flex items-center justify-center">
+        <div className="w-full container mx-auto  bg-black overflow-hidden py-12 flex items-center justify-center">
             <style jsx>{`
                 @keyframes scroll-logos {
                     0% {
