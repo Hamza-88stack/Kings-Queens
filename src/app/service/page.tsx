@@ -97,23 +97,24 @@ const ServicesPage: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white ">
-            <div className="px-20">
+        <div className="min-h-screen bg-black text-white">
+            <div className="px-4 sm:px-6 lg:px-8 xl:px-12">
                 <Header />
 
                 {/* Hero Section */}
-                <ServicesHeroSection
-                    image={
-                        Lady}
-                    imageAlt="Woman holding laundry basket"
-                    title="A list of our extensive service offerings - all including free collection and delivery"
-                    subtitle="Our Services"
-                    breadcrumbCurrent="Services"
-                />
+                <section className="py-12 sm:py-16 lg:py-20 ">
+                    <ServicesHeroSection
+                        image={Lady}
+                        imageAlt="Woman holding laundry basket"
+                        title="A list of our extensive service offerings - all including free collection and delivery"
+                        subtitle="Our Services"
+                        breadcrumbCurrent="Services"
+                    />
+                </section>
 
                 {/* Services Grid Section */}
-                <section className="py-16">
-                    <div className="container mx-auto  ">
+                <section className="py-12 sm:py-16 lg:py-20">
+                    <div className="container mx-auto flex justify-center">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {mainServices.map((service) => (
                                 <ServiceCard
@@ -129,35 +130,39 @@ const ServicesPage: React.FC = () => {
                 </section>
 
                 {/* Featured Services Section */}
-                <section className="py-16">
-                    <div className="container mx-auto ">
+                <section className="py-12 sm:py-16 lg:py-20">
+                    <div className="container   mx-auto">
                         <div className="text-center mb-12">
                             <p className="text-[#ffffff] text-lg mb-2">Our Services</p>
                             <h2 className="text-white text-2xl lg:text-3xl font-light">
                                 These are the services we are providing
                             </h2>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {featuredServices.map((service) => (
-                                <ServiceCard
-                                    key={`featured-${service.id}`}
-                                    icon={service.icon}
-                                    title={service.title}
-                                    description={service.description}
-                                    onButtonClick={() => handleOrderClick(service.title)}
-                                />
-                            ))}
+                        <div className="flex justify-center">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                {featuredServices.map((service) => (
+                                    <ServiceCard
+                                        key={`featured-${service.id}`}
+                                        icon={service.icon}
+                                        title={service.title}
+                                        description={service.description}
+                                        onButtonClick={() => handleOrderClick(service.title)}
+                                    />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 {/* Pricing Section */}
-                <PricingSection />
+                <section className="py-12 sm:py-16 lg:py-20">
+                    <PricingSection />
+                </section>
 
                 {/* Bottom CTA Section */}
-                <div className="my-20">
+                <section className="py-12 sm:py-16 lg:py-20">
                     <BottomHeroSection image={Table} />
-                </div>
+                </section>
             </div>
             <Footer />
         </div>

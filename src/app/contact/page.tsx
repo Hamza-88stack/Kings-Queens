@@ -3,7 +3,7 @@ import ServicesHeroSection from "../components/hero-section/hero";
 import Lady from "@/Kings & Queens/contact-lady.svg"
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
-import ContactForm from "../components/contact-form/contact-form";
+// import ContactForm from "../components/contact-form/contact-form";
 import ReviewsSection from "../components/review-section/reviewsection";
 
 const ServicesPage: React.FC = () => {
@@ -29,7 +29,7 @@ const ServicesPage: React.FC = () => {
             {/* Services Grid */}
             <div className="container mx-auto px-4 ">
 
-                <ContactForm />
+                {/* <ContactForm /> */}
                 {/* Featured Services Grid */}
                 <ReviewsSection />
                 <Footer />
