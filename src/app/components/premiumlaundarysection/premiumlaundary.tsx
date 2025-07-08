@@ -78,6 +78,7 @@ const PremiumLaundrySection = () => {
                         </div>
 
                         {/* Service Cards */}
+                        <div className="text-center flex justify-center">
                         <div className="grid grid-cols-1 md:grid-cols-2  gap-6 mb-12">
                             {services.map((service) => (
                                 <ServiceCard
@@ -89,6 +90,7 @@ const PremiumLaundrySection = () => {
                                     showButton={false}
                                 />
                             ))}
+                        </div>
                         </div>
                     </div>
                 </div>

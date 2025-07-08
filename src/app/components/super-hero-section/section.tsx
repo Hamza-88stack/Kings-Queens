@@ -17,7 +17,7 @@ const SuperHeroSection: React.FC<SuperHeroSectionProps> = ({
 }) => {
    
   return (
-    <section className="relative w-full flex items-center bg-gradient-to-br from-[#C6AE64] to-[#9C7238] justify-center overflow-hidden rounded-xl">
+    <section className="relative w-full flex items-center sm:pt-0 pt-6 bg-gradient-to-br from-[#C6AE64] to-[#9C7238] justify-center overflow-hidden rounded-xl">
       <div className="absolute inset-0">
         {/* Overlay for gradient effect and text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 sm:via-black/30 lg:via-black/10 to-transparent z-10"></div>
@@ -51,7 +51,7 @@ const SuperHeroSection: React.FC<SuperHeroSectionProps> = ({
           </div>
 
           {/* Trustpilot Review */}
-          <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-3 text-center sm:text-left">
+          <div className="mt-4 sm:mt-6 flex flex-row items-center justify-center lg:justify-start gap-2 sm:gap-3 text-center sm:text-left">
             <p className="font-[200] text-sm">Excellent</p>
             <div className="flex items-center text-white">
               {/* Using inline SVG for stars for better quality */}

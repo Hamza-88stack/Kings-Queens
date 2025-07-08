@@ -50,6 +50,7 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Services Grid */}
+                <div className="text-center flex justify-center">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                     {services.map((service) => (
                         <ServiceCard
@@ -60,6 +61,7 @@ const ServicesSection = () => {
                             showButton={false}
                         />
                     ))}
+                </div>
                 </div>
 
                 {/* See All Services Button */}

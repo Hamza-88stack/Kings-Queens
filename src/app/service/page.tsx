@@ -113,7 +113,7 @@ const ServicesPage: React.FC = () => {
 
                 {/* Services Grid Section */}
                 <section className="py-16">
-                    <div className="container mx-auto px-6">
+                    <div className="container mx-auto  ">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {mainServices.map((service) => (
                                 <ServiceCard
@@ -130,7 +130,7 @@ const ServicesPage: React.FC = () => {
 
                 {/* Featured Services Section */}
                 <section className="py-16">
-                    <div className="container mx-auto px-6">
+                    <div className="container mx-auto ">
                         <div className="text-center mb-12">
                             <p className="text-[#ffffff] text-lg mb-2">Our Services</p>
                             <h2 className="text-white text-2xl lg:text-3xl font-light">

@@ -34,7 +34,7 @@ const HowItWorksSection: React.FC = () => {
 
   return (
     <section className="bg-black py-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto ">
         {/* Header */}
         <div className="text-center mb-12">
           <h4 className="text-white text-lg font-[400] mb-2">
@@ -46,6 +46,7 @@ const HowItWorksSection: React.FC = () => {
         </div>
 
         {/* Steps Grid */}
+        <div className="text-center flex justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step) => (
             <ServiceCard
@@ -57,6 +58,7 @@ const HowItWorksSection: React.FC = () => {
 
             />
           ))}
+        </div>
         </div>
       </div>
     </section>
