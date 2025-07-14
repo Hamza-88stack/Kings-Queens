@@ -31,7 +31,7 @@ const ServicesHeroSection: React.FC<ServicesHeroSectionProps> = ({
         {/* Left Text Content */}
         <div className="w-full md:w-4/5  text-center md:text-left mb-8 md:mb-0 md:pr-8 lg:pr-12">
           {subtitle && (
-            <p className="text-xs sm:text-sm uppercase font-[400] tracking-wider mb-3 sm:mb-4 text-gray-300">
+            <p className="text-xs sm:text-sm uppercase pt-3 font-[400] tracking-wider mb-3 sm:mb-4 text-gray-300">
               {subtitle}
             </p>
           )}

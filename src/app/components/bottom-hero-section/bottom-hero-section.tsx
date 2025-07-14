@@ -22,7 +22,7 @@ const BottomHeroSection: React.FC<BottomHeroSectionProps> = ({
       </div>
 
       {/* Content Container */}
-      <div className="relative z-20 w-full h-full">
+      <div className="relative container mx-auto z-20 w-full h-full">
         {/* Main Content */}
         <div className="px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16 flex flex-col lg:flex-row items-center lg:items-start justify-between text-white gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 h-full">
 

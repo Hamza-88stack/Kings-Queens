@@ -83,7 +83,7 @@ const Header = () => {
                 About
               </Link>
               <Link
-                href="/services"
+                href="/service"
                 className="px-4 py-3 text-white hover:text-yellow-400 hover:bg-gray-900 transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >

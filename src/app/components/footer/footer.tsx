@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function  Footer() {
+export default function Footer() {
   return (
     <footer className="bg-[#141414] text-white">
       {/* Main Footer Content */}
@@ -13,7 +13,7 @@ export default function  Footer() {
               Trained by several professionals where you will not learn on your own and minimize injuries.
             </p>
           </div>
-          
+
           {/* Navigation Links */}
           <div className="grid grid-cols-2 gap-8">
             <div>
@@ -52,49 +52,49 @@ export default function  Footer() {
           </div>
         </div>
       </div>
-      
+
       {/* Policy Links Bar */}
-      <div 
-        className="py-3  px-8"
-        style={{ 
-          background: 'linear-gradient(90deg, #C6AE64 0%, #9C7238 100%)' 
+      <div
+        className="py-3 px-8"
+        style={{
+          background: 'linear-gradient(90deg, #C6AE64 0%, #9C7238 100%)'
         }}
       >
-        <div className=" mx-auto">
-          <div className="flex flex-wrap justify-center md:justify-around gap-6 text-sm">
-            <a 
-              href="#" 
-              className="text-black transition-colors duration-200 font-medium"
+        <div className="mx-auto">
+          <div className="grid grid-cols-2 text-start md:flex md:flex-wrap md:justify-around gap-x-4 gap-y-3 text-sm">
+            <a
+              href="#"
+              className="text-black transition-colors duration-200 font-medium text-start md:text-left"
             >
               Privacy Policy
             </a>
-            <a 
-              href="#" 
-              className="text-black transition-colors duration-200 font-medium"
+            <a
+              href="#"
+              className="text-black transition-colors duration-200 font-medium text-start md:text-left"
             >
               Refund Policy
             </a>
-            <a 
-              href="#" 
-              className="text-black transition-colors duration-200 font-medium"
+            <a
+              href="#"
+              className="text-black transition-colors duration-200 font-medium text-start md:text-left"
             >
               Return Policy
             </a>
-            <a 
-              href="#" 
-              className="text-black transition-colors duration-200 font-medium"
+            <a
+              href="#"
+              className="text-black transition-colors duration-200 font-medium text-start md:text-left"
             >
               Cancellation Policy
             </a>
-            <a 
-              href="#" 
-              className="text-black transition-colors duration-200 font-medium"
+            <a
+              href="#"
+              className="text-black transition-colors duration-200 font-medium text-start md:text-left"
             >
               Shipping Policy
             </a>
-            <a 
-              href="#" 
-              className="text-black transition-colors duration-200 font-medium"
+            <a
+              href="#"
+              className="text-black transition-colors duration-200 font-medium text-start md:text-left"
             >
               Billing Policy
             </a>
