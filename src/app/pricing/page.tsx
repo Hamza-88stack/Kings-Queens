@@ -1,11 +1,7 @@
 "use client"
 import { useState } from "react";
-import ServicesHeroSection from "../components/hero-section/hero";
-import Lady from "@/Kings & Queens/contact-lady.svg"
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
-import ContactForm from "../components/contact-form/contact-form";
-import ReviewsSection from "../components/review-section/reviewsection";
 import ServiceItem from "../components/pricing-comp/pricingcomp";
 import DryCleaningProcess from "../components/pricing-service/pricing-service";
 
@@ -51,13 +47,13 @@ const ServicesPage: React.FC<ServiceListProps> = ({ services }) => {
             <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
                 <Header />
                 {/* Hero Section */}
-                <section className="mt-6 sm:mt-8 md:mt-10 lg:mt-12 mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+                <section className="mt-6 sm:mt-8 md:mt-10 lg:mt-12 mb-12 sm:mb-16  ">
                     <div className="flex justify-center">
-                        <div className="text-center max-w-6xl mb-12">
+                        <div className="text-center max-w-6xl mb-1">
                             <h4 className="text-white text-lg font-[400] mb-2 ">
                                 Clear Pricing
                             </h4>
-                            <h2 className="text-white text-3xl md:text-4xl font-[200]">
+                            <h2 className="text-white text-3xl md:text-4xl font-extralight">
                                 Professional dry cleaning for all kinds of garments, and more with a 24 hour turnaround
                             </h2>
                         </div>
@@ -81,14 +77,14 @@ const ServicesPage: React.FC<ServiceListProps> = ({ services }) => {
                         ))}
                     </div>
                 </section>
-</div>
+
                 {/* Dry Cleaning Process Section */}
-                <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+                <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24 sm:-mx-6 md:-mx-8 lg:-mx-12 xl:-mx-16 2xl:-mx-20">
                     <DryCleaningProcess />
                 </section>
 
                 {/* Second Services Grid (if intended, otherwise remove) */}
-                <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+                <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {serviceList.map((service) => (
                             <ServiceItem
@@ -104,6 +100,7 @@ const ServicesPage: React.FC<ServiceListProps> = ({ services }) => {
                         ))}
                     </div>
                 </section>
+            </div>
 
             {/* Footer - typically full width */}
             <Footer />

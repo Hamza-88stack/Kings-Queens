@@ -34,15 +34,14 @@ export default function Home() {
         <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
           <ServicesSection />
         </section>
-      </div>
+
 
       {/* Full-width Features Banner */}
-      <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+      <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24  sm:-mx-6 md:-mx-8 lg:-mx-12 xl:-mx-16 2xl:-mx-20">
         <FeaturesBanner />
       </section>
 
-      {/* Container for middle sections */}
-      <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+
         {/* Pricing Section */}
         <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
           <PricingSection />

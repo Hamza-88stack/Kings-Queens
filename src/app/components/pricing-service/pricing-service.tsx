@@ -51,7 +51,7 @@ export default function DryCleaningProcess() {
 
                 {/* Process Steps */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {steps.map((step, index) => (
+                    {steps.map((step) => (
                         <div key={step.id} className="text-center relative">
                             {/* Icon */}
                             <div className="mb-6 relative">
