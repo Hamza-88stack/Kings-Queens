@@ -3,6 +3,7 @@
 import Image from "next/image";
 import PricingCard from "../pricing-card/pricingcard";
 import ArrowRight from "@/Kings & Queens/arrow.svg"
+import Link from "next/link";
 
 const PricingSection: React.FC = () => {
   // Pricing plans data
@@ -91,6 +92,7 @@ const PricingSection: React.FC = () => {
         </div>
 
         {/* View Full Pricing Button */}
+         <Link href="/pricing">
           <div className="flex justify-center">
           <div className="text-center bg-gradient-to-b  from-[#C6AE64]  to-[#9C7238] w-[203px] py-[2px] pl-[2px] rounded-full mt-2">
            <div className="flex gap-2 items-center">
@@ -101,6 +103,7 @@ const PricingSection: React.FC = () => {
            </div>
          </div>
          </div>
+         </Link>
       </div>
     </section>
   );

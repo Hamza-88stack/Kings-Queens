@@ -12,7 +12,7 @@ interface FeatureItemProps {
 // Reusable FeatureItem Component
 const FeatureItem: React.FC<FeatureItemProps> = ({ icon, title , text}) => {
   return (
-    <div className="flex items-center space-x-3 text-white">
+    <div className="flex justify-center items-center space-x-3 text-white">
       {/* Icon Container */}
       <div className="w-12 h-12 flex items-center justify-center rounded-full   flex-shrink-0">
         <div className="text-black">

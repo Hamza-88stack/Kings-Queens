@@ -1,8 +1,8 @@
 "use client"
 import { useState } from 'react';
 import { MapPin } from 'lucide-react';
-// import Send from "@/Kings & Queens/Group 192.svg"
-// import Image from 'next/image';
+import Send from "@/Kings & Queens/Group 192.svg"
+import Image from 'next/image';
 export default function ContactForm() {
   const [formData] = useState({
     firstName: '',
@@ -86,7 +86,7 @@ export default function ContactForm() {
                 />
               </div>
 
-              {/* <div className="relative mb-6"> {/* Added relative for absolute positioning of the icon, and mb-6 for spacing 
+              <div className="relative mb-6"> {/* Added relative for absolute positioning of the icon, and mb-6 for spacing */}
                 <label htmlFor="message" className="block text-white text-sm font-light mb-2">
                   Message*
                 </label>
@@ -100,7 +100,7 @@ export default function ContactForm() {
                   className="
           w-full py-3 pl-4 pr-16  
           bg-[#141414] text-gray-300 placeholder-gray-500
-          rounded-br-[80px] border border-[#484848]
+          rounded-xl border border-[#484848]
           focus:outline-none focus:border-[#FFD700] focus:ring-1 focus:ring-[#FFD700]
           resize-none  
           custom-textarea-corner  "
@@ -114,10 +114,12 @@ export default function ContactForm() {
                   }}
                 ></textarea>
 
+                {/* Send Icon Button */}
                 <button
                   type="button" // Use type="button" to prevent form submission if this is part of a larger form
                   className="
           absolute bottom-3 right-3  
+          border border-[#141414]
           w-12 h-12 // Fixed size for the button
           rounded-full // Circular button
           flex items-center justify-center // Center the icon
@@ -128,45 +130,18 @@ export default function ContactForm() {
                   aria-label="Send Message"
                 >
 
-                  <Image alt=';l' src={Send} className="-mt-1 -mr-1 w-10 h-10 transform -rotate-45" // Adjust icon position and initial rotation
+                  <Image alt=';l' src={Send} className="-mt-1 -mr-1 w-12 h-12 transform -rotate-45" // Adjust icon position and initial rotation
                   />
                 </button>
-              </div> */}
-              <div className="relative w-full max-w-lg">
-                <textarea
-                  placeholder="Message"
-                  className="
-          w-full resize-none bg-black text-white placeholder-gray-500 
-          border border-gray-700 p-3 pr-16 rounded-md 
-          focus:outline-none focus:border-gray-500 min-h-[60px]
-        "
-                ></textarea>
-
-                <button
-                  type="button"
-                  className="
-          absolute bottom-2 right-2 
-          bg-gradient-to-b from-[#d4af37] to-[#b8860b]
-          p-3 rounded-full shadow
-          hover:opacity-90 transition
-        "
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                    stroke="white" className="w-4 h-4"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l15-6.75-6.75 15-2.25-6.75-6.75-2.25z" />
-                  </svg>
-                </button>
               </div>
+
             </div>
           </div>
 
           {/* Map and Contact Info */}
           <div className="space-y-6">
             {/* Map */}
-            <div className="bg-gray-800 rounded-lg overflow-hidden   relative">
+            <div className="bg-white-800 rounded-lg overflow-hidden   relative">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 opacity-20"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">

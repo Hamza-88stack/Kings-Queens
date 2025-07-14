@@ -5,7 +5,7 @@ export default function  Footer() {
     <footer className="bg-[#141414] text-white">
       {/* Main Footer Content */}
       <div className="px-8 py-12">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand Section */}
           <div className="md:col-span-2">
             <h2 className="text-3xl font-[400] mb-4">Kings & Queens</h2>

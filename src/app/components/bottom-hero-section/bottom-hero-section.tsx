@@ -2,6 +2,7 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import ArrowRight from "@/Kings & Queens/arrow.svg"
+import Link from 'next/link';
 
 interface BottomHeroSectionProps {
   image?: string | StaticImageData;
@@ -44,20 +45,22 @@ const BottomHeroSection: React.FC<BottomHeroSectionProps> = ({
 
             {/* Contact Button */}
             <div className="pt-2 sm:pt-3 md:pt-4">
-              <div className="bg-gradient-to-b from-[#C6AE64] to-[#9C7238] w-[140px] sm:w-[152px] md:w-[164px] lg:w-[176px] py-[2px] pl-[2px] rounded-full mx-auto lg:mx-0">
-                <div className="flex gap-2 md:gap-3 items-center">
-                  <div className="bg-black rounded-full flex-1 text-center text-xs sm:text-sm md:text-base px-3 sm:px-4 py-2 sm:py-2.5">
-                    <p className='text-[#9D7439] font-medium'>Contact Us</p>
-                  </div>
-                  <div className="pr-2 sm:pr-3">
-                    <Image
-                      className='w-3 h-2 sm:w-4 sm:h-3 md:w-5 md:h-4'
-                      src={ArrowRight}
-                      alt="Arrow pointing right"
-                    />
+              <Link href="/contact">
+                <div className="bg-gradient-to-b from-[#C6AE64] to-[#9C7238] w-[140px] sm:w-[152px] md:w-[164px] lg:w-[176px] py-[2px] pl-[2px] rounded-full mx-auto lg:mx-0">
+                  <div className="flex gap-2 md:gap-3 items-center">
+                    <div className="bg-black rounded-full flex-1 text-center text-xs sm:text-sm md:text-base px-3 sm:px-4 py-2 sm:py-2.5">
+                      <p className='text-[#9D7439] font-medium'>Contact Us</p>
+                    </div>
+                    <div className="pr-2 sm:pr-3">
+                      <Image
+                        className='w-3 h-2 sm:w-4 sm:h-3 md:w-5 md:h-4'
+                        src={ArrowRight}
+                        alt="Arrow pointing right"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
 

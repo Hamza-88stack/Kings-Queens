@@ -5,6 +5,7 @@ import Shirt from "@/Kings & Queens/5654.svg"
 import Wedding from "@/Kings & Queens/Vect123or.svg"
 import Shoes from "@/Kings & Queens/Vector (1).svg"
 import ArrowRight from "@/Kings & Queens/arrow.svg"
+import Link from 'next/link';
 
 import Something from "@/Kings & Queens/Group 15.svg"
 const ServicesSection = () => {
@@ -65,6 +66,7 @@ const ServicesSection = () => {
                 </div>
 
                 {/* See All Services Button */}
+                <Link href="/service">
                 <div className="text-center flex justify-center">
                 <div className="bg-gradient-to-b  from-[#C6AE64] text-center  to-[#9C7238] w-[189px] py-[2px] pl-[2px] rounded-full mt-3">
                     <div className="flex gap-2 items-center">
@@ -75,6 +77,7 @@ const ServicesSection = () => {
                     </div>
                 </div>
                 </div>
+                </Link>
             </div>
         </section>
     );
