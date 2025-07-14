@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, MapPin, Minus, Plus } from 'lucide-react';
+import {  MapPin, Minus, Plus } from 'lucide-react';
 
 interface ServiceItemProps {
     title: string;
@@ -23,7 +23,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
     onPlaceOrder
 }) => {
     const [quantity, setQuantity] = useState(1);
-    const [selectedLocation, setSelectedLocation] = useState('');
+    // const [selectedLocation, setSelectedLocation] = useState('');
     const [collectionSlot, setCollectionSlot] = useState('');
     const [dropoffSlot, setDropoffSlot] = useState('');
 
