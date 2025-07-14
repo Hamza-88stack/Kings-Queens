@@ -5,19 +5,19 @@ import Footer from "../components/footer/footer";
 import ServiceItem from "../components/pricing-comp/pricingcomp";
 import DryCleaningProcess from "../components/pricing-service/pricing-service";
 
-interface ServiceListProps {
-    services?: Array<{
-        id: string;
-        title: string;
-        subtitle?: string;
-        price: number;
-    }>;
+// Define the service type
+interface Service {
+    id: string;
+    title: string;
+    subtitle?: string;
+    price: number;
 }
 
-const ServicesPage: React.FC<ServiceListProps> = ({ services }) => {
+// Next.js page component - no custom props allowed
+export default function PricingPage() {
     const [expandedItem, setExpandedItem] = useState<string | null>(null);
 
-    const defaultServices = [
+    const defaultServices: Service[] = [
         { id: '1', title: 'Blouse', subtitle: 'Dry Clean', price: 12.00 },
         { id: '2', title: 'Trouser', subtitle: 'Dry Clean', price: 8.00 },
         { id: '3', title: 'Dress', subtitle: 'Dry Clean', price: 15.00 },
@@ -34,8 +34,9 @@ const ServicesPage: React.FC<ServiceListProps> = ({ services }) => {
         { id: '14', title: 'Dress suit', subtitle: 'Dry Clean', price: 2.00 }
     ];
 
-    // Fixed: Check if services exists and has length, otherwise use defaultServices
-    const serviceList = services && services.length > 0 ? services : defaultServices;
+    // If you need to fetch services dynamically, you can do it here
+    // For example, using useEffect or server-side data fetching
+    const serviceList = defaultServices;
 
     const handleToggleExpand = (serviceId: string) => {
         setExpandedItem(expandedItem === serviceId ? null : serviceId);
@@ -47,10 +48,10 @@ const ServicesPage: React.FC<ServiceListProps> = ({ services }) => {
             <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
                 <Header />
                 {/* Hero Section */}
-                <section className="mt-6 sm:mt-8 md:mt-10 lg:mt-12 mb-12 sm:mb-16  ">
+                <section className="mt-6 sm:mt-8 md:mt-10 lg:mt-12 mb-12 sm:mb-16">
                     <div className="flex justify-center">
                         <div className="text-center max-w-6xl mb-1">
-                            <h4 className="text-white text-lg font-[400] mb-2 ">
+                            <h4 className="text-white text-lg font-[400] mb-2">
                                 Clear Pricing
                             </h4>
                             <h2 className="text-white text-3xl md:text-4xl font-extralight">
@@ -88,7 +89,7 @@ const ServicesPage: React.FC<ServiceListProps> = ({ services }) => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {serviceList.map((service) => (
                             <ServiceItem
-                                key={service.id}
+                                key={`second-${service.id}`}
                                 title={service.title}
                                 subtitle={service.subtitle}
                                 price={service.price}
@@ -106,6 +107,4 @@ const ServicesPage: React.FC<ServiceListProps> = ({ services }) => {
             <Footer />
         </div>
     );
-};
-
-export default ServicesPage;
+}
