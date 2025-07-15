@@ -9,11 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/google": "^1.2.22",
+    "@ai-sdk/react": "^1.2.12",
+    "@ai-sdk/ui-utils": "^1.2.11",
+    "ai": "^4.3.19",
     "lucide-react": "^0.523.0",
     "next": "15.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-world-flags": "^1.6.0"
+    "react-markdown": "^10.1.0",
+    "react-world-flags": "^1.6.0",
+    "remark-gfm": "^4.0.1",
+    "zod": "^4.0.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
