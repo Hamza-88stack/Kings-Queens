@@ -2,27 +2,140 @@
 
 import { useState, useEffect, useRef } from "react";
 import { X, Send, Loader2 } from "lucide-react";
-// import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { useChat } from "@ai-sdk/react";
 import type { Components } from "react-markdown";
+
+interface Message {
+  id: string;
+  role: "user" | "assistant";
+  content: string;
+}
+
+// Custom hook to replace useChat
+function useCustomChat(apiEndpoint: string, initialMessages: Message[] = []) {
+  const [messages, setMessages] = useState<Message[]>(initialMessages);
+  const [input, setInput] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const generateId = () => Math.random().toString(36).slice(2, 15);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInput(e.target.value);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!input.trim() || isLoading) return;
+
+    const userMessage: Message = {
+      id: generateId(),
+      role: "user",
+      content: input.trim(),
+    };
+
+    const newMessages = [...messages, userMessage];
+    setMessages(newMessages);
+    setInput("");
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch(apiEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          messages: newMessages,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const reader = response.body?.getReader();
+      const decoder = new TextDecoder();
+      let assistantContent = "";
+
+      const assistantMessage: Message = {
+        id: generateId(),
+        role: "assistant",
+        content: "",
+      };
+
+      setMessages([...newMessages, assistantMessage]);
+
+      if (reader) {
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          const chunk = decoder.decode(value);
+          const lines = chunk.split('\n');
+
+          for (const line of lines) {
+            if (line.startsWith('0:')) {
+              try {
+                const data = JSON.parse(line.slice(2));
+                if (data.type === 'textDelta' && data.textDelta) {
+                  assistantContent += data.textDelta;
+                  setMessages(prev => 
+                    prev.map(msg => 
+                      msg.id === assistantMessage.id 
+                        ? { ...msg, content: assistantContent }
+                        : msg
+                    )
+                  );
+                }
+              } finally  {
+                console.warn('Failed to parse chunk:', line);
+              }
+            }
+          }
+        }
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "An error occurred");
+      console.error("Chat error:", err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const reload = () => {
+    setError(null);
+    // Optionally implement retry logic here
+  };
+
+  return {
+    messages,
+    input,
+    handleInputChange,
+    handleSubmit,
+    isLoading,
+    error,
+    reload,
+  };
+}
 
 export default function ContactModal() {
   const [isOpen, setIsOpen] = useState(false);
   const messagesEndRef = useRef<null | HTMLDivElement>(null);
 
-  // Use the AI chat hook instead of local state
-  const { messages, input, handleInputChange, handleSubmit, isLoading,  reload, error } = useChat({ 
-    api: "/api/gemini",
-    initialMessages: [
+  // Use custom chat hook instead of AI SDK
+  const { messages, input, handleInputChange, handleSubmit, isLoading, reload, error } = useCustomChat(
+    "/api/gemini",
+    [
       {
         id: "initial-message",
         role: "assistant",
         content: "Welcome. I'm your professional assistant at Kings & Queens. How may I assist you today?"
       }
-    ] 
-  });
+    ]
+  );
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -96,7 +209,6 @@ export default function ContactModal() {
         {/* Fixed Header */}
         <div className="flex items-center justify-between p-4 min-h-20 border-b border-[#333333] flex-shrink-0 bg-gradient-to-r from-[#1a1a1a] to-[#0f0f0f] rounded-t-lg">
           <div className="flex items-center space-x-3">
-            {/* <div className="w-2 h-2 bg-gradient-to-br from-[#C6AE64] to-[#9C7238] rounded-full"></div> */}
             <h3 className="text-white font-semibold text-lg">Professional Support</h3>
           </div>
           <button 
