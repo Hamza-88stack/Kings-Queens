@@ -6,6 +6,7 @@ import { X, Send, Loader2 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useChat } from "@ai-sdk/react";
+import type { Components } from "react-markdown";
 
 export default function ContactModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,11 +52,47 @@ export default function ContactModal() {
     setIsOpen(false);
   };
 
+  // Define markdown components with proper typing
+  const markdownComponents: Components = {
+    code: (props) => {
+      const { children, className, ...rest } = props;
+      const isInline = !className?.includes('language-');
+      
+      return isInline ? (
+        <code className={`px-2 py-1 rounded text-xs font-mono bg-[#2a2a2a] text-[#C6AE64]`} {...rest}>
+          {children}
+        </code>
+      ) : (
+        <pre className={`p-3 rounded-lg mt-2 overflow-x-auto bg-[#2a2a2a]`}>
+          <code className={`text-xs font-mono text-[#C6AE64]`} {...rest}>
+            {children}
+          </code>
+        </pre>
+      );
+    },
+    ul: ({ children }) => (
+      <ul className="list-disc pl-5 space-y-1 mt-2 marker:text-current">
+        {children}
+      </ul>
+    ),
+    ol: ({ children }) => (
+      <ol className="list-decimal pl-5 space-y-1 mt-2 marker:text-current">
+        {children}
+      </ol>
+    ),
+    p: ({ children }) => (
+      <p className="mb-2 last:mb-0 leading-relaxed">{children}</p>
+    ),
+    strong: ({ children }) => (
+      <strong className="font-semibold text-[#C6AE64]">{children}</strong>
+    ),
+  };
+
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-[100] flex items-end md:justify-end justify-center pointer-events-none md:pr-2 pr-0 rtl:p-0">
-      <div className="bg-[#141414] shadow-2xl border border-[#333333] w-full md:max-w-sm h-[70vh] max-h-[550px] flex flex-col overflow-hidden pointer-events-auto mb-16 md:mb-20 mb-0 md:mr-0 mr-0 rtl:ml-0 rtl:mr-6 md:rtl:mr-6 md:rounded-lg rounded-t-lg backdrop-blur-sm">
+      <div className="bg-[#141414] shadow-2xl border border-[#333333] w-full md:max-w-sm h-[70vh] max-h-[550px] flex flex-col overflow-hidden pointer-events-auto mb-16 md:mb-20   md:mr-0 mr-0 rtl:ml-0 rtl:mr-6 md:rtl:mr-6 md:rounded-lg rounded-t-lg backdrop-blur-sm">
         {/* Fixed Header */}
         <div className="flex items-center justify-between p-4 min-h-20 border-b border-[#333333] flex-shrink-0 bg-gradient-to-r from-[#1a1a1a] to-[#0f0f0f] rounded-t-lg">
           <div className="flex items-center space-x-3">
@@ -93,9 +130,12 @@ export default function ContactModal() {
                   <ReactMarkdown
                     remarkPlugins={[remarkGfm]}
                     components={{
-                      code(props) {
-                        const { inline, children, ...rest } = props as any;
-                        return inline ? (
+                      ...markdownComponents,
+                      code: (props) => {
+                        const { children, className, ...rest } = props;
+                        const isInline = !className?.includes('language-');
+                        
+                        return isInline ? (
                           <code className={`px-2 py-1 rounded text-xs font-mono ${
                             message.role === "user" 
                               ? "bg-black/20 text-black" 
@@ -117,19 +157,6 @@ export default function ContactModal() {
                           </pre>
                         );
                       },
-                      ul: ({ children }) => (
-                        <ul className="list-disc pl-5 space-y-1 mt-2 marker:text-current">
-                          {children}
-                        </ul>
-                      ),
-                      ol: ({ children }) => (
-                        <ol className="list-decimal pl-5 space-y-1 mt-2 marker:text-current">
-                          {children}
-                        </ol>
-                      ),
-                      p: ({ children }) => (
-                        <p className="mb-2 last:mb-0 leading-relaxed">{children}</p>
-                      ),
                       strong: ({ children }) => (
                         <strong className={`font-semibold ${
                           message.role === "user" ? "text-black" : "text-[#C6AE64]"
