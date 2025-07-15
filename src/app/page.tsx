@@ -19,7 +19,7 @@ import { MessageCircle } from "lucide-react";
 import ContactModal from "./components/contact-modal";
 export default function Home() {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
-  const [ , setIsChatModalOpen] = useState(false);
+  const [, setIsChatModalOpen] = useState(false);
 
   useEffect(() => {
     const handleChatModalStateChange = (event: Event) => {
@@ -35,13 +35,13 @@ export default function Home() {
   }, []);
 
   const handleOpenChat = () => {
-  document.dispatchEvent(new CustomEvent("toggleContactModal"));
-  
-  if (isBookingModalOpen) {
-    setIsBookingModalOpen(false);
-  }
-};
-   
+    document.dispatchEvent(new CustomEvent("toggleContactModal"));
+
+    if (isBookingModalOpen) {
+      setIsBookingModalOpen(false);
+    }
+  };
+
   return (
     <div className="bg-black">
       {/* Container with consistent responsive padding */}
@@ -100,18 +100,17 @@ export default function Home() {
           <BottomHeroSection image={Table} />
         </section>
       </div>
-      <div className="fixed bottom-3 right-2 z-50 hidden md:flex items-center rtl:space-x-reverse">
+      <div className="fixed bottom-3 right-2 z-50 flex items-center rtl:space-x-reverse">
         <div className="bg-gradient-to-br from-[#C6AE64] to-[#9C7238] rounded-full shadow-lg overflow-hidden flex items-center">
           <button
             onClick={handleOpenChat}
-            className={`flex flex-col items-center justify-center px-6 py-3 text-white text-xs transition-colors duration-150  cursor-pointer`}
+            className={`flex flex-col items-center justify-center px-4 py-2 md:px-6 md:py-3 text-white text-xs transition-colors duration-150 cursor-pointer hover:bg-gradient-to-br hover:from-[#B8A05A] hover:to-[#8B6530]`}
           >
-            <MessageCircle className="h-5 w-6 mb-0.5" />
-            <span className="pt-1">Chat</span>
+            <MessageCircle className="h-4 w-4 md:h-5 md:w-6 mb-0.5" />
+            <span className="pt-1 text-xs">Chat</span>
           </button>
         </div>
         <ContactModal />
-
       </div>
       {/* Footer - typically full width */}
       <Footer />
