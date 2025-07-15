@@ -19,7 +19,7 @@ import { MessageCircle } from "lucide-react";
 import ContactModal from "./components/contact-modal";
 export default function Home() {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
-  const [isChatModalOpen, setIsChatModalOpen] = useState(false);
+  const [ , setIsChatModalOpen] = useState(false);
 
   useEffect(() => {
     const handleChatModalStateChange = (event: Event) => {
