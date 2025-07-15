@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { X, Send, Loader2 } from "lucide-react";
-import Image from "next/image";
+// import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useChat } from "@ai-sdk/react";
@@ -12,7 +12,7 @@ export default function ContactModal() {
   const messagesEndRef = useRef<null | HTMLDivElement>(null);
 
   // Use the AI chat hook instead of local state
-  const { messages, input, handleInputChange, handleSubmit, isLoading, stop, reload, error } = useChat({ 
+  const { messages, input, handleInputChange, handleSubmit, isLoading,  reload, error } = useChat({ 
     api: "/api/gemini",
     initialMessages: [
       {
@@ -93,7 +93,7 @@ export default function ContactModal() {
                   <ReactMarkdown
                     remarkPlugins={[remarkGfm]}
                     components={{
-                      code({ node, inline, className, children, ...props }) {
+                      code({inline, children, }) {
                         return inline ? (
                           <code className={`px-2 py-1 rounded text-xs font-mono ${
                             message.role === "user" 
