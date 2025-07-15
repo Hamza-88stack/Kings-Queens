@@ -93,13 +93,14 @@ export default function ContactModal() {
                   <ReactMarkdown
                     remarkPlugins={[remarkGfm]}
                     components={{
-                      code({inline, children, }) {
+                      code(props) {
+                        const { inline, children, ...rest } = props as any;
                         return inline ? (
                           <code className={`px-2 py-1 rounded text-xs font-mono ${
                             message.role === "user" 
                               ? "bg-black/20 text-black" 
                               : "bg-[#2a2a2a] text-[#C6AE64]"
-                          }`}>
+                          }`} {...rest}>
                             {children}
                           </code>
                         ) : (
@@ -110,7 +111,7 @@ export default function ContactModal() {
                           }`}>
                             <code className={`text-xs font-mono ${
                               message.role === "user" ? "text-black" : "text-[#C6AE64]"
-                            }`}>
+                            }`} {...rest}>
                               {children}
                             </code>
                           </pre>
