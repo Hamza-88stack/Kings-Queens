@@ -293,7 +293,6 @@ export default function ContactModal() {
                     <div className="w-2 h-2 bg-[#C6AE64] rounded-full animate-pulse delay-100"></div>
                     <div className="w-2 h-2 bg-[#C6AE64] rounded-full animate-pulse delay-200"></div>
                   </div>
-                  <span className="text-[#888888]">Processing your request...</span>
                 </div>
               </div>
             </div>
