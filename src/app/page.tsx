@@ -41,16 +41,7 @@ export default function Home() {
     setIsBookingModalOpen(false);
   }
 };
-  const handleOpenBooking = () => {
-    setIsBookingModalOpen(true);
-    if (isChatModalOpen) {
-      document.dispatchEvent(new CustomEvent("toggleContactModal", { detail: false }));
-    }
-  };
-
-  const closeBookingModal = () => {
-    setIsBookingModalOpen(false);
-  };
+   
   return (
     <div className="bg-black">
       {/* Container with consistent responsive padding */}
