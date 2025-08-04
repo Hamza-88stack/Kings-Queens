@@ -4,14 +4,12 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from 'next/navigation';
 import Header from "@/app/components/header/header";
 import HowItWorksSection from "@/app/components/howitworks/howitworks";
-import FAQSection from "@/app/components/faqs-section/faqssection";
 import Footer from "@/app/components/footer/footer";
 import ContactModal from "@/app/components/contact-modal";
-import { MessageCircle, ShoppingCart } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import HeroSection from "@/app/components/order-super-section/supersection";
 import FeaturesBanner from "@/app/components/feature-section/featuresection";
 import LogoCarousel from "@/app/components/logo-carousel/logo-carousel";
-import Image from 'next/image';
 import ServiceItem from "@/app/components/pricing-comp/pricingcomp";
 
 // Import your service icons
@@ -180,32 +178,32 @@ export default function ServiceOrder() {
     setExpandedItem(null);
   };
 
-  const updateQuantity = (item: string, newQuantity: number) => {
-    if (newQuantity === 0) {
-      setCart(prevCart => prevCart.filter(cartItem => cartItem.item !== item));
-    } else {
-      setCart(prevCart =>
-        prevCart.map(cartItem =>
-          cartItem.item === item
-            ? { ...cartItem, quantity: newQuantity }
-            : cartItem
-        )
-      );
-    }
-  };
+  // const updateQuantity = (item: string, newQuantity: number) => {
+  //   if (newQuantity === 0) {
+  //     setCart(prevCart => prevCart.filter(cartItem => cartItem.item !== item));
+  //   } else {
+  //     setCart(prevCart =>
+  //       prevCart.map(cartItem =>
+  //         cartItem.item === item
+  //           ? { ...cartItem, quantity: newQuantity }
+  //           : cartItem
+  //       )
+  //     );
+  //   }
+  // };
 
-  const getTotalPrice = () => {
-    return cart.reduce((total, item) => {
-      if (typeof item.price === 'number') {
-        return total + (item.price * item.quantity);
-      }
-      return total;
-    }, 0).toFixed(2);
-  };
+  // const getTotalPrice = () => {
+  //   return cart.reduce((total, item) => {
+  //     if (typeof item.price === 'number') {
+  //       return total + (item.price * item.quantity);
+  //     }
+  //     return total;
+  //   }, 0).toFixed(2);
+  // };
 
-  const getTotalItems = () => {
-    return cart.reduce((total, item) => total + item.quantity, 0);
-  };
+  // const getTotalItems = () => {
+  //   return cart.reduce((total, item) => total + item.quantity, 0);
+  // };
 
   const handleToggleExpand = (itemName: string) => {
     setExpandedItem(expandedItem === itemName ? null : itemName);
@@ -235,7 +233,7 @@ export default function ServiceOrder() {
         <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
           <HowItWorksSection />
         </section>
-        
+
         {/* Service Header */}
         <section className="mt-12 mb-8">
           <div className=" items-center flex justify-center text-center mb-6">

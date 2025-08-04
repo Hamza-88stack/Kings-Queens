@@ -8,14 +8,9 @@ import PricingSection from "../components/pricing-section/pricingsection";
 import ServicesHeroSection from "../components/hero-section/hero";
 import Shirt from "@/Kings & Queens/5654.svg"
 import Wedding from "@/Kings & Queens/Vect123or.svg"
-import Shoes from "@/Kings & Queens/Vector (1).svg"
-import Something from "@/Kings & Queens/Group 15.svg"
 import Dry from "@/Kings & Queens/Kings & Queens/Group 71.svg"
 import HouseHold from "@/Kings & Queens/Kings & Queens/Union-1.svg"
-import Bed from "@/Kings & Queens/Kings & Queens/Union-2.svg"
-import Curtain from "@/Kings & Queens/Kings & Queens/Union-3.svg"
 import Repairs from "@/Kings & Queens/Kings & Queens/Union.svg"
-import Ironing from "@/Kings & Queens/Kings & Queens/Union.svg"
 import BottomHeroSection from "../components/bottom-hero-section/bottom-hero-section";
 import Table from "@/Kings & Queens/image 1.svg"
 
@@ -118,7 +113,7 @@ const ServicesPage: React.FC = () => {
     const mainServices = services.slice(0, 5);
 
     // Featured services for bottom section (first 4)
-    const featuredServices = services.slice(0, 4);
+    // const featuredServices = services.slice(0, 4);
 
     const handleOrderClick = (serviceId: number) => {
         // Navigate to the order page with the service ID as a query parameter
