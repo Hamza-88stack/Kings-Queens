@@ -243,3 +243,12 @@ function ServiceOrderContent() {
     </div>
   );
 }
+
+// Main export component wrapped with Suspense
+export default function ServiceOrder() {
+  return (
+    <Suspense fallback={<LoadingSpinner />}>
+      <ServiceOrderContent />
+    </Suspense>
+  );
+}
