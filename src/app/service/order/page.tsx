@@ -111,17 +111,16 @@ const servicesData = [
   }
 ];
 
-interface CartItem {
-  item: string;
-  price: number | string;
-  quantity: number;
-}
+// interface CartItem {
+//   item: string;
+//   price: number | string;
+//   quantity: number;
+// }
 
 export default function ServiceOrder() {
   const searchParams = useSearchParams();
   const serviceId = searchParams.get('serviceId');
   const [selectedService, setSelectedService] = useState<typeof servicesData[0] | null>(null);
-  const [cart, setCart] = useState<CartItem[]>([]);
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const [, setIsChatModalOpen] = useState(false);
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
@@ -158,25 +157,7 @@ export default function ServiceOrder() {
     }
   };
 
-  const addToCart = (item: string, price: number | string) => {
-    if (typeof price === 'string') return; // Skip items with non-numeric prices like "20% off"
-
-    setCart(prevCart => {
-      const existingItem = prevCart.find(cartItem => cartItem.item === item);
-      if (existingItem) {
-        return prevCart.map(cartItem =>
-          cartItem.item === item
-            ? { ...cartItem, quantity: cartItem.quantity + 1 }
-            : cartItem
-        );
-      } else {
-        return [...prevCart, { item, price, quantity: 1 }];
-      }
-    });
-
-    // Close the expanded item after adding to cart
-    setExpandedItem(null);
-  };
+ 
 
   // const updateQuantity = (item: string, newQuantity: number) => {
   //   if (newQuantity === 0) {
@@ -255,8 +236,6 @@ export default function ServiceOrder() {
                   price={priceItem.price}
                   isExpanded={false}
                   onToggleExpand={() => handleToggleExpand(priceItem.item)}
-
-                  onPlaceOrder={() => addToCart(priceItem.item, priceItem.price)}
                 />
               )
             ))}
