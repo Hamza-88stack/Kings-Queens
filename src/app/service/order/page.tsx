@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from 'next/navigation';
 import Header from "@/app/components/header/header";
 import HowItWorksSection from "@/app/components/howitworks/howitworks";
@@ -111,13 +111,20 @@ const servicesData = [
   }
 ];
 
-// interface CartItem {
-//   item: string;
-//   price: number | string;
-//   quantity: number;
-// }
+// Loading component for suspense fallback
+function LoadingSpinner() {
+  return (
+    <div className="bg-black text-white min-h-screen flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#C6AE64] mx-auto mb-4"></div>
+        <p>Loading...</p>
+      </div>
+    </div>
+  );
+}
 
-export default function ServiceOrder() {
+// Main component that uses useSearchParams
+function ServiceOrderContent() {
   const searchParams = useSearchParams();
   const serviceId = searchParams.get('serviceId');
   const [selectedService, setSelectedService] = useState<typeof servicesData[0] | null>(null);
@@ -157,41 +164,12 @@ export default function ServiceOrder() {
     }
   };
 
- 
-
-  // const updateQuantity = (item: string, newQuantity: number) => {
-  //   if (newQuantity === 0) {
-  //     setCart(prevCart => prevCart.filter(cartItem => cartItem.item !== item));
-  //   } else {
-  //     setCart(prevCart =>
-  //       prevCart.map(cartItem =>
-  //         cartItem.item === item
-  //           ? { ...cartItem, quantity: newQuantity }
-  //           : cartItem
-  //       )
-  //     );
-  //   }
-  // };
-
-  // const getTotalPrice = () => {
-  //   return cart.reduce((total, item) => {
-  //     if (typeof item.price === 'number') {
-  //       return total + (item.price * item.quantity);
-  //     }
-  //     return total;
-  //   }, 0).toFixed(2);
-  // };
-
-  // const getTotalItems = () => {
-  //   return cart.reduce((total, item) => total + item.quantity, 0);
-  // };
-
   const handleToggleExpand = (itemName: string) => {
     setExpandedItem(expandedItem === itemName ? null : itemName);
   };
 
   if (!selectedService) {
-    return <div className="bg-black text-white min-h-screen flex items-center justify-center">Loading...</div>;
+    return <LoadingSpinner />;
   }
 
   return (
@@ -241,38 +219,6 @@ export default function ServiceOrder() {
             ))}
           </div>
         </section>
-
-        {/* Cart Summary */}
-        {/* {cart.length > 0 && (
-                    <section className="mb-12">
-                        <div className="bg-[#141414] rounded-xl p-6 border border-[#C6AE64]">
-                            <h3 className="text-white text-xl font-medium mb-4 flex items-center">
-                                <ShoppingCart className="w-5 h-5 mr-2" />
-                                Your Order ({getTotalItems()} items)
-                            </h3>
-                            <div className="space-y-3 mb-4">
-                                {cart.map((item, index) => (
-                                    <div key={index} className="flex justify-between items-center text-gray-300">
-                                        <span>{item.item} x {item.quantity}</span>
-                                        <span className="text-[#C6AE64]">${(typeof item.price === 'number' ? item.price * item.quantity : 0).toFixed(2)}</span>
-                                    </div>
-                                ))}
-                            </div>
-                            <div className="border-t border-gray-700 pt-4">
-                                <div className="flex justify-between items-center text-white text-xl font-semibold">
-                                    <span>Total</span>
-                                    <span className="text-[#C6AE64]">${getTotalPrice()}</span>
-                                </div>
-                                <button className="w-full mt-4 bg-gradient-to-r from-[#C6AE64] to-[#9C7238] text-black py-3 rounded-xl font-medium hover:from-[#d4bf73] hover:to-[#a87840] transition-colors">
-                                    Proceed to Checkout
-                                </button>
-                            </div>
-                        </div>
-                    </section>
-                )} */}
-
-
-
 
         <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24 sm:-mx-6 md:-mx-8 lg:-mx-12 xl:-mx-16 2xl:-mx-20">
           <FeaturesBanner />
