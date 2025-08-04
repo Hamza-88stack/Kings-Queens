@@ -11,7 +11,7 @@ const PricingSection: React.FC = () => {
     {
       id: 1,
       planName: "Basic Plan",
-      price: "50$",
+      price: "50€",
       description: "Great for one person! Get laundry done FAST.",
       features: [
         "Collection of Clothes",
@@ -24,7 +24,7 @@ const PricingSection: React.FC = () => {
     {
       id: 2,
       planName: "Standard Plan",
-      price: "100$",
+      price: "100€",
       description: "Great for one person! Get laundry done FAST.",
       features: [
         "Collection of Clothes",
@@ -37,7 +37,7 @@ const PricingSection: React.FC = () => {
     {
       id: 3,
       planName: "Advanced Plan",
-      price: "150$",
+      price: "150€",
       description: "Great for one person! Get laundry done FAST.",
       features: [
         "Collection of Clothes",
@@ -50,7 +50,7 @@ const PricingSection: React.FC = () => {
     {
       id: 4,
       planName: "Premium Plan",
-      price: "200$",
+      price: "200€",
       description: "Great for one person! Get laundry done FAST.",
       features: [
         "Collection of Clothes",
