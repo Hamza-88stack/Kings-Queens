@@ -28,7 +28,7 @@ const SuperHeroSection: React.FC<SuperHeroSectionProps> = ({
         {/* Left Content: Text & Form */}
         <div className="w-full lg:w-1/2 max-w-lg text-center lg:text-left flex flex-col items-center  lg:items-start">
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-[100] uppercase leading-tight max-w-full lg:max-w-md">
-            LAUNDRY FOR THOSE WHO HATE <span className='font-[400]'>SURPRISES</span>
+            Leave the dirty work <br /> to us
           </h1>
           <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg font-[200] tracking-wide text-white">
             Expert Dry Cleaners Free 24hr Delivery

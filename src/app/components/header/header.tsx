@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, } from 'lucide-react';
-import Logo from "@/Kings & Queens/Kings & Queens logo 1.svg"
+import Logo from "@/Kings & Queens/KNQ logo for website (3).svg"
 import Image from 'next/image';
 import Flag from 'react-world-flags';
 
@@ -15,14 +15,14 @@ const Header = () => {
 
   return (
     <header className="bg-black text-white  sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-4">
+      <div className="container mx-auto px-4 py-3">
+        <div className="flex items-center justify-between ">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <div className="relative">
                 {/* Crown Logo */}
-                <div className="w-30 flex items-center justify-center">
+                <div className="w-35 flex items-center justify-center">
                   <Image src={Logo} alt='' />
                 </div>
               </div>

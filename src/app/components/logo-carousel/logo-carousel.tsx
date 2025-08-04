@@ -3,23 +3,24 @@ import React from 'react';
 import Image from 'next/image';
 
 // Import your unique logo images
-import Image1 from "@/Kings & Queens/Group 11.svg"
-import Image3 from "@/Kings & Queens/Group 12.svg"
-import Image4 from "@/Kings & Queens/Group 13.svg"
-import Image6 from "@/Kings & Queens/Group 14.svg"
-import Image7 from "@/Kings & Queens/gdstudios 1.svg"
-import Image8 from "@/Kings & Queens/Vector-1.svg"
-import Image9 from "@/Kings & Queens/Vector.svg"
+import Image1 from "@/Kings & Queens/airbnb (1).png"
+import Image4 from "@/Kings & Queens/hampton (1).png"
+import Image6 from "@/Kings & Queens/parkplaza (1).png"
+import Image7 from "@/Kings & Queens/hilton (1).png"
+import Image8 from "@/Kings & Queens/LSBU (1).png"
+import Image9 from "@/Kings & Queens/shangrila (1).png"
+import Image10 from "@/Kings & Queens/somerset-house (1).png"
+
 
 // Define the array of UNIQUE logos
 const uniqueLogos = [
     Image1,
-    Image3,
     Image4,
     Image6,
     Image7,
     Image8,
     Image9,
+    Image10
 ];
 
 // Duplicate the unique logos to create the seamless loop.

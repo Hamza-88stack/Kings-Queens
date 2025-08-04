@@ -24,7 +24,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   onButtonClick
 }) => {
   return (
-    <div className="relative bg-[#141414] hover:bg-[#1D1D1D] border border-transparent rounded-xl py-6   group cursor-pointer transition-all duration-300 overflow-hidden hover:border-gradient max-w-xs min-h-[280px]  ">
+    <div className="relative bg-[#141414] hover:bg-[#1D1D1D] border border-transparent rounded-xl py-6   group cursor-pointer transition-all duration-300 overflow-hidden hover:border-gradient  min-h-[280px]  ">
       {/* Gradient border overlay - only visible on hover */}
       <div 
         className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"

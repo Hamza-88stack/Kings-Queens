@@ -64,8 +64,8 @@ const PricingSection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-black py-16">
-      <div className="container mx-auto px-4">
+    <section className="bg-black ">
+      <div className="container mx-auto ">
         {/* Header */}
         <div className="text-center mb-12">
           <h4 className="text-white text-lg font-[400] mb-2 ">

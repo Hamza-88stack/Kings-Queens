@@ -49,7 +49,7 @@ export default function Home() {
         <Header />
 
         {/* Hero Section */}
-        <section className="mt-6 sm:mt-8 md:mt-10 lg:mt-12">
+        <section className="mt-2 sm:mt-8 md:mt-10 lg:mt-12">
           <SuperHeroSection image={Man} />
         </section>
 
