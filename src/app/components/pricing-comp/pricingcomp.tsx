@@ -16,7 +16,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
     title,
     subtitle,
     price,
-    currency = '$',
+    currency = '£',
     isExpanded = false,
     onToggleExpand,
     onQuantityChange,
