@@ -1,6 +1,6 @@
 import React from 'react';
 import { Instagram } from 'lucide-react';
-import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -22,9 +22,9 @@ export default function Footer() {
               <h3 className="text-[#C6AE64] text-lg font-medium mb-6">Quick Links</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="/" className="text-white hover:text-[#C6AE64] transition-colors duration-200 text-sm">
+                  <Link href="/" className="text-white hover:text-[#C6AE64] transition-colors duration-200 text-sm">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="/about" className="text-white hover:text-[#C6AE64] transition-colors duration-200 text-sm">

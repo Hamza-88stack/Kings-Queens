@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Star } from 'lucide-react';
 
@@ -48,7 +47,7 @@ const StarRating: React.FC<StarRatingProps> = ({ rating, className = '' }) => {
     );
 };
 // Reusable ReviewCard Component
-const ReviewCard: React.FC<ReviewCardProps> = ({  title, review, customerName, large = false }) => {
+const ReviewCard: React.FC<ReviewCardProps> = ({ review, customerName, large = false }) => {
     return (
         <div className="flex flex-col bg-[#141414] rounded-xl p-6 h-full">
             {/* Star Rating */}

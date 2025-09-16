@@ -64,7 +64,7 @@ export default function ContactForm() {
         setSubmitStatus('error');
         setErrorMessage(result.error || 'Failed to send message');
       }
-    } catch (error) {
+    } catch (err) {
       setSubmitStatus('error');
       setErrorMessage('Network error. Please try again.');
     } finally {
@@ -176,7 +176,7 @@ export default function ContactForm() {
               {submitStatus === 'success' && (
                 <div className="p-4 bg-green-900/20 border border-green-500 rounded-lg">
                   <p className="text-green-400 text-sm">
-                    ✅ Message sent successfully! We'll get back to you soon.
+                    &#10004; Message sent successfully! We&#39;ll get back to you soon.
                   </p>
                 </div>
               )}
@@ -184,7 +184,7 @@ export default function ContactForm() {
               {submitStatus === 'error' && (
                 <div className="p-4 bg-red-900/20 border border-red-500 rounded-lg">
                   <p className="text-red-400 text-sm">
-                    ❌ {errorMessage}
+                    &#10060; {errorMessage}
                   </p>
                 </div>
               )}
@@ -212,7 +212,7 @@ export default function ContactForm() {
                   <h2 className="text-2xl font-light mb-4">Get in Touch</h2>
                   <p className="text-gray-400 leading-relaxed">
                     Have questions about our dry cleaning services? Need a quote for your garments? 
-                    We're here to help! Send us a message and we'll respond as quickly as possible.
+                    We&#39;re here to help! Send us a message and we&#39;ll respond as quickly as possible.
                   </p>
                 </div>
 
@@ -229,7 +229,7 @@ export default function ContactForm() {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <div className="w-5 h-5 text-[#C6AE64] mt-1 flex-shrink-0">📞</div>
+                    <div className="w-5 h-5 text-[#C6AE64] mt-1 flex-shrink-0">&#128222;</div>
                     <div>
                       <h3 className="font-medium mb-1">Call Us</h3>
                       <p className="text-gray-400 text-sm">
@@ -241,7 +241,7 @@ export default function ContactForm() {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <div className="w-5 h-5 text-[#C6AE64] mt-1 flex-shrink-0">✉️</div>
+                    <div className="w-5 h-5 text-[#C6AE64] mt-1 flex-shrink-0">&#10069;</div>
                     <div>
                       <h3 className="font-medium mb-1">Email Us</h3>
                       <p className="text-gray-400 text-sm">
@@ -253,7 +253,7 @@ export default function ContactForm() {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <div className="w-5 h-5 text-[#C6AE64] mt-1 flex-shrink-0">🕒</div>
+                    <div className="w-5 h-5 text-[#C6AE64] mt-1 flex-shrink-0">&#128336;</div>
                     <div>
                       <h3 className="font-medium mb-1">Business Hours</h3>
                       <div className="text-gray-400 text-sm space-y-1">
