@@ -64,7 +64,7 @@ export default function ContactForm() {
         setSubmitStatus('error');
         setErrorMessage(result.error || 'Failed to send message');
       }
-    } catch (_err) {
+    } catch {
       setSubmitStatus('error');
       setErrorMessage('Network error. Please try again.');
     } finally {
