@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Header from "./components/header/header";
 import ServicesSection from "./components/service-section/service-section";
 import FeaturesBanner from "./components/feature-section/featuresection";
-import PricingSection from "./components/pricing-section/pricingsection";
+//from "./components/pricing-section/pricingsection";
 import HowItWorksSection from "./components/howitworks/howitworks";
 import ReviewsSection from "./components/review-section/reviewsection";
 import PremiumLaundrySection from "./components/premiumlaundarysection/premiumlaundary";
@@ -72,7 +72,7 @@ export default function Home() {
 
         {/* Pricing Section */}
         <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-          <PricingSection />
+        
         </section>
 
         {/* How It Works Section */}

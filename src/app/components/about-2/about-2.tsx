@@ -1,6 +1,6 @@
 // components/SustainabilitySection.jsx
 import Image from 'next/image';
-import Image1 from "@/Kings & Queens/Rectangle 93.svg"
+import Image1 from "@/Kings & Queens/Kings & Queens/washing-machines-laundromat.jpg"
 import { Check } from 'lucide-react';
 
 const SustainabilitySection = () => {

@@ -4,7 +4,7 @@ import ServiceCard from "../components/card/card";
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
 import Lady from "@/Kings & Queens/kings queen lady 1.svg"
-import PricingSection from "../components/pricing-section/pricingsection";
+//from "../components/pricing-section/pricingsection";
 import ServicesHeroSection from "../components/hero-section/hero";
 import Shirt from "@/Kings & Queens/5654.svg"
 import Wedding from "@/Kings & Queens/Vect123or.svg"
@@ -155,7 +155,7 @@ const ServicesPage: React.FC = () => {
 
                 {/* Pricing Section */}
                 <section className="py-12 sm:py-16 lg:py-20">
-                    <PricingSection />
+                    
                 </section>
 
                 {/* Bottom CTA Section */}

@@ -52,12 +52,10 @@ const ReviewCard: React.FC<ReviewCardProps> = ({  title, review, customerName, l
     return (
         <div className="flex flex-col bg-[#141414] rounded-xl p-6 h-full">
             {/* Star Rating */}
-            <StarRating rating={2} className="my-custom-class" />
+            <StarRating rating={5} className="my-custom-class" />
 
             {/* Review Title */}
-            <h3 className={`text-white ${large ? "text-base md:text-lg" : "text-sm"} font-semibold mb-4 group-hover:text-yellow-400 transition-colors duration-300`}>
-                {title}
-            </h3>
+            
 
             {/* Review Text */}
             <p className={`text-gray-400 ${large ? "  md:text-base" : "text-sm"} leading-relaxed mb-6 flex-grow group-hover:text-gray-300 transition-colors duration-300`}>

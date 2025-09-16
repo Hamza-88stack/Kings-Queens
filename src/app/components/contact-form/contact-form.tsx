@@ -3,8 +3,9 @@ import { useState } from 'react';
 import { MapPin } from 'lucide-react';
 import Send from "@/Kings & Queens/Group 192.svg"
 import Image from 'next/image';
+
 export default function ContactForm() {
-  const [formData] = useState({
+  const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
@@ -12,17 +13,73 @@ export default function ContactForm() {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Validate required fields
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
+      setErrorMessage('Please fill in all required fields');
+      setSubmitStatus('error');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phoneNumber: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+        setErrorMessage(result.error || 'Failed to send message');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      setErrorMessage('Network error. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-[#141414]   text-white p-4">
+    <div className="min-h-screen bg-[#141414] text-white p-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Form */}
-          <div className=" p-8 rounded-lg">
-            <div className="space-y-6">
-              <div className="grid grid-cols-1  gap-4">
+          <div className="p-8 rounded-lg">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 gap-4">
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-[200] mb-2">
                     First Name*
@@ -32,9 +89,9 @@ export default function ContactForm() {
                     id="firstName"
                     name="firstName"
                     value={formData.firstName}
-                    // onChange={handleInputChange}
+                    onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-[#141414] rounded-lg border border-[#484848] "
+                    className="w-full px-4 py-3 bg-[#141414] rounded-lg border border-[#484848] focus:border-[#C6AE64] focus:outline-none transition-colors"
                     placeholder="Enter your first name"
                   />
                 </div>
@@ -47,9 +104,9 @@ export default function ContactForm() {
                     id="lastName"
                     name="lastName"
                     value={formData.lastName}
-                    // onChange={handleInputChange}
+                    onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-[#141414] rounded-lg border border-[#484848] "
+                    className="w-full px-4 py-3 bg-[#141414] rounded-lg border border-[#484848] focus:border-[#C6AE64] focus:outline-none transition-colors"
                     placeholder="Enter your last name"
                   />
                 </div>
@@ -64,9 +121,9 @@ export default function ContactForm() {
                   id="email"
                   name="email"
                   value={formData.email}
-                  // onChange={handleInputChange}
+                  onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 bg-[#141414] rounded-lg border border-[#484848] "
+                  className="w-full px-4 py-3 bg-[#141414] rounded-lg border border-[#484848] focus:border-[#C6AE64] focus:outline-none transition-colors"
                   placeholder="Enter your email address"
                 />
               </div>
@@ -80,68 +137,64 @@ export default function ContactForm() {
                   id="phoneNumber"
                   name="phoneNumber"
                   value={formData.phoneNumber}
-                  // onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-[#141414] rounded-lg border border-[#484848] "
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 bg-[#141414] rounded-lg border border-[#484848] focus:border-[#C6AE64] focus:outline-none transition-colors"
                   placeholder="Enter your phone number"
                 />
               </div>
 
-              <div className="relative mb-6"> {/* Added relative for absolute positioning of the icon, and mb-6 for spacing */}
+              <div className="relative mb-6">
                 <label htmlFor="message" className="block text-white text-sm font-light mb-2">
                   Message*
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message} // Make sure formData.message is defined and handleInputChange updates it
-                  // onChange={handleInputChange} // Make sure handleInputChange is defined
+                  value={formData.message}
+                  onChange={handleInputChange}
                   required
-                  rows={4} // Reduced rows to match the image's height more closely
-                  className="
-          w-full py-3 pl-4 pr-16  
-          bg-[#141414] text-gray-300 placeholder-gray-500
-          rounded-xl border border-[#484848]
-          focus:outline-none focus:border-[#FFD700] focus:ring-1 focus:ring-[#FFD700]
-          resize-none  
-          custom-textarea-corner  "
-                  placeholder="Message" // Changed placeholder text to "Message" as per image"
-                  style={{
-                    // For the custom cut corner, you'd typically use clip-path or a pseudo-element.
-                    // Tailwind doesn't have a direct class for this shape.
-                    // Let's create a custom class for it.
-                    // border-bottom-right-radius: 0; is not enough
-                    // We need a more complex shape or a pseudo-element
-                  }}
-                ></textarea>
-
-                {/* Send Icon Button */}
+                  rows={4}
+                  className="w-full py-3 pl-4 pr-16 bg-[#141414] text-gray-300 placeholder-gray-500 rounded-xl border border-[#484848] focus:border-[#C6AE64] focus:outline-none transition-colors resize-none"
+                  placeholder="Tell us about your dry cleaning needs..."
+                />
+                
+                {/* Send Button */}
                 <button
-                  type="button" // Use type="button" to prevent form submission if this is part of a larger form
-                  className="
-          absolute bottom-3 right-3  
-          border border-[#141414]
-          w-12 h-12 // Fixed size for the button
-          rounded-full // Circular button
-          flex items-center justify-center // Center the icon
-          hover:opacity-90 transition-opacity duration-200
-           transform rotate-45 // Rotate the icon for the airplane effect
-        "
-                  // onClick={handleSendMessage} // Add your send message handler here
-                  aria-label="Send Message"
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="absolute bottom-3 right-3 p-2 bg-[#C6AE64] hover:bg-[#B8A055] disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg transition-colors duration-200 flex items-center justify-center"
                 >
-
-                  <Image alt=';l' src={Send} className="-mt-1 -mr-1 w-12 h-12 transform -rotate-45" // Adjust icon position and initial rotation
-                  />
+                  {isSubmitting ? (
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                  ) : (
+                    <Image src={Send} alt="Send" width={20} height={20} />
+                  )}
                 </button>
               </div>
 
-            </div>
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="p-4 bg-green-900/20 border border-green-500 rounded-lg">
+                  <p className="text-green-400 text-sm">
+                    ✅ Message sent successfully! We'll get back to you soon.
+                  </p>
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="p-4 bg-red-900/20 border border-red-500 rounded-lg">
+                  <p className="text-red-400 text-sm">
+                    ❌ {errorMessage}
+                  </p>
+                </div>
+              )}
+            </form>
           </div>
 
           {/* Map and Contact Info */}
           <div className="space-y-6">
             {/* Map */}
-            <div className="bg-white-800 rounded-lg overflow-hidden   relative">
+            <div className="bg-white-800 rounded-lg overflow-hidden relative">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 opacity-20"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
@@ -153,7 +206,66 @@ export default function ContactForm() {
             </div>
 
             {/* Contact Information */}
+            <div className="p-8">
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-2xl font-light mb-4">Get in Touch</h2>
+                  <p className="text-gray-400 leading-relaxed">
+                    Have questions about our dry cleaning services? Need a quote for your garments? 
+                    We're here to help! Send us a message and we'll respond as quickly as possible.
+                  </p>
+                </div>
 
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <MapPin className="w-5 h-5 text-[#C6AE64] mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-medium mb-1">Visit Our Store</h3>
+                      <p className="text-gray-400 text-sm">
+                        123 Main Street<br />
+                        Your City, State 12345
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3">
+                    <div className="w-5 h-5 text-[#C6AE64] mt-1 flex-shrink-0">📞</div>
+                    <div>
+                      <h3 className="font-medium mb-1">Call Us</h3>
+                      <p className="text-gray-400 text-sm">
+                        <a href="tel:+1234567890" className="hover:text-[#C6AE64] transition-colors">
+                          (123) 456-7890
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3">
+                    <div className="w-5 h-5 text-[#C6AE64] mt-1 flex-shrink-0">✉️</div>
+                    <div>
+                      <h3 className="font-medium mb-1">Email Us</h3>
+                      <p className="text-gray-400 text-sm">
+                        <a href="mailto:kingsandqueens.dcl@gmail.com" className="hover:text-[#C6AE64] transition-colors">
+                          kingsandqueens.dcl@gmail.com
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3">
+                    <div className="w-5 h-5 text-[#C6AE64] mt-1 flex-shrink-0">🕒</div>
+                    <div>
+                      <h3 className="font-medium mb-1">Business Hours</h3>
+                      <div className="text-gray-400 text-sm space-y-1">
+                        <p>Monday - Friday: 7:00 AM - 7:00 PM</p>
+                        <p>Saturday: 8:00 AM - 6:00 PM</p>
+                        <p>Sunday: 10:00 AM - 4:00 PM</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
