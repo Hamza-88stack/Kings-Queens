@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 import ServiceCard from "../components/card/card";
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
-import Lady from "@/Kings & Queens/kings queen lady 1.svg"
+// import Lady from "@/Kings & Queens/kings queen lady 1.svg"
 //from "../components/pricing-section/pricingsection";
 import ServicesHeroSection from "../components/hero-section/hero";
 import Shirt from "@/Kings & Queens/5654.svg"

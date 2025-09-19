@@ -72,7 +72,7 @@ const ReviewsSection: React.FC = () => {
                             className="flex transition-transform duration-500 ease-in-out"
                             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                         >
-                            {reviews.map((review, index) => (
+                            {reviews.map((review) => (
                                 <div key={review.id} className="w-full flex-shrink-0 px-4">
                                     <div className="overflow-hidden">
                                         <ReviewCard {...review} large />
