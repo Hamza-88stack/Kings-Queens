@@ -7,24 +7,24 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "What types of charts do you sell?",
-      answer: "We offer a wide range of downloadable charts including astrology charts, trading and investment charts, educational diagrams and custom chart solutions. Each chart is created with Excel, accuracy and clear visual understanding."
+      question: "What services do you offer?",
+      answer: "We provide professional dry cleaning, laundry, ironing, service washes, and stain removal. We also specialise in caring for delicate fabrics, luxury garments, and bulk laundry for businesses such as hotels, Airbnbs, and care homes. Whether you need a quick wash while visiting London or regular cleaning for your household or business, we've got you covered."
     },
     {
-      question: "Are the charts digital or physical products?",
-      answer: "All our charts are digital products delivered as downloadable files. This allows for instant access and the ability to print multiple copies if needed."
+      question: "Do you offer collection and delivery?",
+      answer: "Yes, we provide a convenient collection and delivery service across London. Simply book a pickup, and we'll collect your laundry, clean it to the highest standard, and deliver it back to your door. This service is ideal for busy professionals, tourists, and businesses."
     },
     {
-      question: "How do I receive my chart after purchase?",
-      answer: "After completing your purchase, you&apos;ll receive an email with download links to your charts. The files will be available for download immediately and you can access them from your account dashboard."
+      question: "How much does a service wash cost?",
+      answer: "Our service washes start from £26 to £50+, depending on load size and specific requirements. We also offer competitive pricing for regular customers and discounted rates for bulk and business orders."
     },
     {
-      question: "What file formats do the charts come in?",
-      answer: "Our charts are provided in multiple formats including PDF, PNG, and SVG to ensure compatibility with various devices and printing requirements. Some charts may also include editable formats like AI or PSD files."
+      question: "How long does dry cleaning usually take?",
+      answer: "Most dry cleaning and laundry orders are ready within 24–48 hours. For urgent needs, we also offer a same-day and next-day service, so you don't have to wait long to get your clothes fresh and clean."
     },
     {
-      question: "Can I print the charts at home?",
-      answer: "Yes, all our digital charts are designed to be print-friendly. They come in high resolution and are optimized for standard paper sizes. We recommend using quality paper for the best results."
+      question: "Do you work with hotels and businesses?",
+      answer: "Yes, we provide reliable laundry and dry cleaning services for hotels, Airbnbs, care homes, and other businesses. We can also create tailored contracts to suit your needs, ensuring consistent quality and timely service."
     }
   ];  
 

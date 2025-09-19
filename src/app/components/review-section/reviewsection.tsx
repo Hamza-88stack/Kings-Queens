@@ -1,5 +1,10 @@
+"use client";
+import { useState, useEffect } from "react";
 import ReviewCard from "../review-card/reviewcard";
+
 const ReviewsSection: React.FC = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
     const reviews = [
         {
             id: 1,
@@ -31,7 +36,20 @@ const ReviewsSection: React.FC = () => {
         }
     ];
 
-    
+    // Auto-advance slider every 3 seconds
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => 
+                prevIndex === reviews.length - 1 ? 0 : prevIndex + 1
+            );
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, [reviews.length]);
+
+    const goToSlide = (index: number) => {
+        setCurrentIndex(index);
+    };
 
     return (
        <section className="bg-black py-16">
@@ -46,26 +64,38 @@ const ReviewsSection: React.FC = () => {
                     </h2>
                 </div>
 
-                {/* Reviews Layout */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
-                    {/* Left - Large Review (takes full height) */}
-                    <div className="lg:row-span-2 h-full">
-                        <ReviewCard {...reviews[0]} large />
+                {/* Slider Container */}
+                <div className="relative max-w-4xl mx-auto">
+                    {/* Review Slider */}
+                    <div className="overflow-hidden">
+                        <div 
+                            className="flex transition-transform duration-500 ease-in-out"
+                            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                        >
+                            {reviews.map((review, index) => (
+                                <div key={review.id} className="w-full flex-shrink-0 px-4">
+                                    <div className="overflow-hidden">
+                                        <ReviewCard {...review} large />
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
 
-                    {/* Right Top - Single Review */}
-                    <div className="h-full">
-                        <ReviewCard {...reviews[1]} />
-                    </div>
-
-                    {/* Right Bottom - Two Reviews Side by Side */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 h-full">
-                        <div className="h-full">
-                            <ReviewCard {...reviews[2]} />
-                        </div>
-                        <div className="h-full">
-                            <ReviewCard {...reviews[3]} />
-                        </div>
+                    {/* Navigation Dots */}
+                    <div className="flex justify-center mt-8 space-x-2">
+                        {reviews.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => goToSlide(index)}
+                                className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+                                    index === currentIndex 
+                                        ? 'bg-gradient-to-r from-[#C6AE64] to-[#9C7238]' 
+                                        : 'bg-gray-600 hover:bg-gray-500'
+                                }`}
+                                aria-label={`Go to review ${index + 1}`}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>

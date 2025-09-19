@@ -128,7 +128,6 @@ const ServicesPage: React.FC = () => {
                 {/* Hero Section */}
                 <section className="py-12 sm:py-16 lg:py-20 ">
                     <ServicesHeroSection
-                        image={Lady}
                         imageAlt="Woman holding laundry basket"
                         title="A list of our extensive service offerings - all including free collection and delivery"
                         subtitle="Our Services"

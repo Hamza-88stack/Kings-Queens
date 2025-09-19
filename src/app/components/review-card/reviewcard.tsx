@@ -57,7 +57,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({ review, customerName, large = f
             
 
             {/* Review Text */}
-            <p className={`text-gray-400 ${large ? "  md:text-base" : "text-sm"} leading-relaxed mb-6 flex-grow group-hover:text-gray-300 transition-colors duration-300`}>
+            <p className={`text-gray-400 ${large ? "  md:text-base" : "text-sm"} leading-relaxed h-20 md:h-full overflow-hidden mb-6 flex-grow group-hover:text-gray-300 transition-colors duration-300`}>
                 {review}
             </p>
 
