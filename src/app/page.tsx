@@ -12,11 +12,12 @@ import FAQSection from "./components/faqs-section/faqssection";
 import Footer from "./components/footer/footer";
 import LogoCarousel from "./components/logo-carousel/logo-carousel";
 import SuperHeroSection from "./components/super-hero-section/section";
-import Man from "@/Kings & Queens/Group 197.svg"
+import Man from "@/Kings & Queens/Adobe Express - file.png"
 import BottomHeroSection from "./components/bottom-hero-section/bottom-hero-section";
 import Table from "@/Kings & Queens/image 1.svg"
 import { MessageCircle } from "lucide-react";
 import ContactModal from "./components/contact-modal";
+import Women from "../Kings & Queens/craiyon_133139_image.png"
 export default function Home() {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const [, setIsChatModalOpen] = useState(false);
@@ -49,8 +50,8 @@ export default function Home() {
         <Header />
 
         {/* Hero Section */}
-        <section className="mt-2 sm:mt-8 md:mt-10 lg:mt-12">
-          <SuperHeroSection image={Man} />
+        <section className="mt-6   ">
+          <SuperHeroSection image={Women} />
         </section>
 
         {/* Logo Carousel */}

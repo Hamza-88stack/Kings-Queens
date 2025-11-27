@@ -73,7 +73,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="min-h-screen bg-[#141414] text-white p-4">
+    <div className=" bg-[#141414] text-white p-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Form */}
@@ -162,12 +162,12 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="absolute bottom-3 right-3 p-2 bg-[#C6AE64] hover:bg-[#B8A055] disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg transition-colors duration-200 flex items-center justify-center"
+                  className="absolute bottom-3 right-3 pd-lg transition-colors duration-200 flex items-center justify-center"
                 >
                   {isSubmitting ? (
                     <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                   ) : (
-                    <Image src={Send} alt="Send" width={20} height={20} />
+                    <Image src={Send} alt="Send" width={40} height={40} />
                   )}
                 </button>
               </div>
@@ -200,7 +200,7 @@ export default function ContactForm() {
                 <div className="text-center">
                   <MapPin className="w-12 h-12 mx-auto mb-2 text-blue-400" />
                   <p className="text-sm text-gray-300">Interactive Map View</p>
-                  <p className="text-xs text-gray-400 mt-1">Entertainment District</p>
+                  <p className="text-xs text-gray-400 mt-1">Waterloo, London</p>
                 </div>
               </div>
             </div>
@@ -218,30 +218,31 @@ export default function ContactForm() {
 
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <MapPin className="w-5 h-5 text-[#C6AE64] mt-1 flex-shrink-0" />
-                    <div>
+                     <div>
                       <h3 className="font-medium mb-1">Visit Our Store</h3>
                       <p className="text-gray-400 text-sm">
-                        123 Main Street<br />
-                        Your City, State 12345
+                        221 Waterloo Rd<br />
+                        London, SE1 8XH
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <div className="w-5 h-5 text-[#C6AE64] mt-1 flex-shrink-0">&#128222;</div>
-                    <div>
+                     <div>
                       <h3 className="font-medium mb-1">Call Us</h3>
                       <p className="text-gray-400 text-sm">
-                        <a href="tel:+1234567890" className="hover:text-[#C6AE64] transition-colors">
-                          (123) 456-7890
+                        <a href="tel:+442071124884" className="hover:text-[#C6AE64] transition-colors">
+                          020 7112 4884
+                        </a>
+                        <br />
+                        <a href="https://wa.me/447512244796" className="hover:text-[#C6AE64] transition-colors">
+                          075 1224 4796 (WhatsApp)
                         </a>
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <div className="w-5 h-5 text-[#C6AE64] mt-1 flex-shrink-0">&#10069;</div>
                     <div>
                       <h3 className="font-medium mb-1">Email Us</h3>
                       <p className="text-gray-400 text-sm">
@@ -253,13 +254,11 @@ export default function ContactForm() {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <div className="w-5 h-5 text-[#C6AE64] mt-1 flex-shrink-0">&#128336;</div>
                     <div>
                       <h3 className="font-medium mb-1">Business Hours</h3>
                       <div className="text-gray-400 text-sm space-y-1">
-                        <p>Monday - Friday: 7:00 AM - 7:00 PM</p>
-                        <p>Saturday: 8:00 AM - 6:00 PM</p>
-                        <p>Sunday: 10:00 AM - 4:00 PM</p>
+                        <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                        <p>Sunday: 10:00 AM - 6:00 PM</p>
                       </div>
                     </div>
                   </div>

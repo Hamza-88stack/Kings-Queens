@@ -72,15 +72,14 @@ const SuperHeroSection: React.FC<SuperHeroSectionProps> = ({
         </div>
 
         {/* Right Content: Image & Decorative Icons */}
-        <div className="relative w-full lg:w-1/2 flex justify-center mt-6 lg:mt-0 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[650px]">
-          <div className="relative w-full h-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
+        <div className="relative w-full lg:w-1/2 flex justify-center mt-6 lg:mt-10 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
+          <div className="relative w-full h-full max-w-sm sm:max-w-md md:max-w-lg bottom-0 lg:max-w-xl xl:max-w-3xl">
             {image && (
               <Image
                 src={image}
                 alt={imageAlt}
+                quality={100}
                 fill
-                className="object-contain object-center z-10"
-                quality={95}
                 priority
               />
             )}

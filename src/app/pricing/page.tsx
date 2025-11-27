@@ -20,8 +20,8 @@ export default function PricingPage() {
 
     const defaultServices: Service[] = [
         // DRY CLEANING/SHIRTS
-        { id: '1', title: 'Shirt on Hanger', subtitle: 'Dry Clean', price: 3.00, category: 'Dry Cleaning/Shirts' },
-        { id: '2', title: 'Shirt Folded', subtitle: 'Dry Clean', price: 3.75, category: 'Dry Cleaning/Shirts' },
+        { id: '1', title: 'Shirt on Hanger', subtitle: 'Dry Clean', price: 5.00, category: 'Dry Cleaning/Shirts' },
+        { id: '2', title: 'Shirt Folded', subtitle: 'Dry Clean', price: 5.00, category: 'Dry Cleaning/Shirts' },
         { id: '3', title: 'Suits', subtitle: 'Dry Clean', price: 16.99, category: 'Dry Cleaning/Shirts' },
         { id: '4', title: 'Trousers/Skirt', subtitle: 'Dry Clean', price: 11.99, category: 'Dry Cleaning/Shirts' },
         { id: '5', title: 'Knitwear', subtitle: 'Dry Clean', price: 10.99, category: 'Dry Cleaning/Shirts' },
@@ -45,29 +45,32 @@ export default function PricingPage() {
         { id: '17', title: 'Pillowcase', subtitle: 'Laundry', price: 3.50, category: 'Laundry' },
         { id: '18', title: 'Double Sheet', subtitle: 'Laundry', price: 10.00, category: 'Laundry' },
         { id: '19', title: 'Double Duvet Cover', subtitle: 'Laundry', price: 13.50, category: 'Laundry' },
-        { id: '20', title: 'Duvets', subtitle: 'Laundry', price: 31.50, category: 'Laundry' },
-        { id: '21', title: 'Towels', subtitle: 'Laundry', price: 5.00, category: 'Laundry' },
+        { id: '20', title: 'Single Duvet', subtitle: 'Laundry', price: 18.99, category: 'Laundry' },
+        { id: '21', title: 'Double Duvet', subtitle: 'Laundry', price: 25.00, category: 'Laundry' },
+        { id: '22', title: 'King/Queen Duvet', subtitle: 'Laundry', price: 35.00, category: 'Laundry' },
+        { id: '23', title: 'Blanket', subtitle: 'from', price: 15.99, category: 'Laundry' },
+        { id: '24', title: 'Towels', subtitle: 'Laundry', price: 5.00, category: 'Laundry' },
         
         // SERVICE WASHES
-        { id: '22', title: 'Small', subtitle: 'Service Wash', price: 26.00, category: 'Service Washes' },
-        { id: '23', title: 'Medium', subtitle: 'Service Wash', price: 30.00, category: 'Service Washes' },
-        { id: '24', title: 'Large', subtitle: 'Service Wash', price: 35.00, category: 'Service Washes' },
-        { id: '25', title: 'X-Large', subtitle: 'Service Wash', price: 50.00, category: 'Service Washes' },
+        { id: '25', title: 'Small', subtitle: 'Service Wash', price: 26.00, category: 'Service Washes' },
+        { id: '26', title: 'Medium', subtitle: 'Service Wash', price: 30.00, category: 'Service Washes' },
+        { id: '27', title: 'Large', subtitle: 'Service Wash', price: 35.00, category: 'Service Washes' },
+        { id: '28', title: 'X-Large', subtitle: 'Service Wash', price: 50.00, category: 'Service Washes' },
         
         // TRAINERS/SNEAKERS
-        { id: '26', title: 'Deep Clean', subtitle: 'Trainers/Sneakers', price: 25.00, category: 'Trainers/Sneakers' },
-        { id: '27', title: 'Restoration', subtitle: 'Trainers/Sneakers', price: 50.00, category: 'Trainers/Sneakers' },
+        { id: '29', title: 'Deep Clean', subtitle: 'Trainers/Sneakers', price: 25.00, category: 'Trainers/Sneakers' },
+        { id: '30', title: 'Restoration', subtitle: 'Trainers/Sneakers', price: 50.00, category: 'Trainers/Sneakers' },
         
         // REPAIRS & ALTERATIONS
-        { id: '28', title: 'Trouser Shorten/Lengthen', subtitle: 'Repairs & Alterations', price: 20.00, category: 'Repairs & Alterations' },
-        { id: '29', title: 'Skirt Shorten/Lengthen', subtitle: 'Repairs & Alterations', price: 20.00, category: 'Repairs & Alterations' },
-        { id: '30', title: 'Trouser/Skirt New Zip', subtitle: 'Repairs & Alterations', price: 22.50, category: 'Repairs & Alterations' },
-        { id: '31', title: 'Shirt Shorten Sleeve', subtitle: 'Repairs & Alterations', price: 22.00, category: 'Repairs & Alterations' },
-        { id: '32', title: 'Jacket Sleeve Short/Long', subtitle: 'Repairs & Alterations', price: 49.50, category: 'Repairs & Alterations' },
-        { id: '33', title: 'Trouser Waist In', subtitle: 'Repairs & Alterations', price: 27.50, category: 'Repairs & Alterations' },
-        { id: '34', title: 'Dress Sleeve Short/Long', subtitle: 'Repairs & Alterations', price: 38.50, category: 'Repairs & Alterations' },
-        { id: '35', title: 'Skirt Waist In', subtitle: 'Repairs & Alterations', price: 27.50, category: 'Repairs & Alterations' },
-        { id: '36', title: 'Coat Sleeve Short/Long', subtitle: 'Repairs & Alterations', price: 55.00, category: 'Repairs & Alterations' }
+        { id: '31', title: 'Trouser Shorten/Lengthen', subtitle: 'Repairs & Alterations', price: 20.00, category: 'Repairs & Alterations' },
+        { id: '32', title: 'Skirt Shorten/Lengthen', subtitle: 'Repairs & Alterations', price: 20.00, category: 'Repairs & Alterations' },
+        { id: '33', title: 'Trouser/Skirt New Zip', subtitle: 'Repairs & Alterations', price: 22.50, category: 'Repairs & Alterations' },
+        { id: '34', title: 'Shirt Shorten Sleeve', subtitle: 'Repairs & Alterations', price: 22.00, category: 'Repairs & Alterations' },
+        { id: '35', title: 'Jacket Sleeve Short/Long', subtitle: 'Repairs & Alterations', price: 49.50, category: 'Repairs & Alterations' },
+        { id: '36', title: 'Trouser Waist In', subtitle: 'Repairs & Alterations', price: 27.50, category: 'Repairs & Alterations' },
+        { id: '37', title: 'Dress Sleeve Short/Long', subtitle: 'Repairs & Alterations', price: 38.50, category: 'Repairs & Alterations' },
+        { id: '38', title: 'Skirt Waist In', subtitle: 'Repairs & Alterations', price: 27.50, category: 'Repairs & Alterations' },
+        { id: '39', title: 'Coat Sleeve Short/Long', subtitle: 'Repairs & Alterations', price: 55.00, category: 'Repairs & Alterations' }
     ];
 
     // If you need to fetch services dynamically, you can do it here
@@ -102,6 +105,9 @@ export default function PricingPage() {
                             <h2 className="text-white text-3xl md:text-4xl font-extralight">
                                 Professional dry cleaning for all kinds of garments, and more with a 24 hour turnaround
                             </h2>
+                            <p className="text-gray-400 text-sm mt-4 italic">
+                                * All items except Service Washes are starting prices
+                            </p>
                         </div>
                     </div>
                 </section>
