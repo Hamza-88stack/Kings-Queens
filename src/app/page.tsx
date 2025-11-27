@@ -12,7 +12,6 @@ import FAQSection from "./components/faqs-section/faqssection";
 import Footer from "./components/footer/footer";
 import LogoCarousel from "./components/logo-carousel/logo-carousel";
 import SuperHeroSection from "./components/super-hero-section/section";
-import Man from "@/Kings & Queens/Adobe Express - file.png"
 import BottomHeroSection from "./components/bottom-hero-section/bottom-hero-section";
 import Table from "@/Kings & Queens/image 1.svg"
 import { MessageCircle } from "lucide-react";
