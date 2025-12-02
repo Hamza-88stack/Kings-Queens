@@ -16,7 +16,6 @@ import BottomHeroSection from "./components/bottom-hero-section/bottom-hero-sect
 import Table from "@/Kings & Queens/image 1.svg"
 import { MessageCircle } from "lucide-react";
 import ContactModal from "./components/contact-modal";
-import Women from "../Kings & Queens/craiyon_133139_image.png"
 export default function Home() {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const [, setIsChatModalOpen] = useState(false);
@@ -50,7 +49,7 @@ export default function Home() {
 
         {/* Hero Section */}
         <section className="mt-6   ">
-          <SuperHeroSection image={Women} />
+          <SuperHeroSection  />
         </section>
 
         {/* Logo Carousel */}
