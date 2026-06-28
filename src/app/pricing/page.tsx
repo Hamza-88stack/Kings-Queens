@@ -10,7 +10,7 @@ interface Service {
     id: string;
     title: string;
     subtitle?: string;
-    price: number;
+    price: number | string;
     category: string;
 }
 
@@ -28,6 +28,7 @@ export default function PricingPage() {
         { id: '6', title: 'Raincoat', subtitle: 'Dry Clean', price: 24.00, category: 'Dry Cleaning/Shirts' },
         { id: '7', title: 'Coat', subtitle: 'Dry Clean', price: 25.00, category: 'Dry Cleaning/Shirts' },
         { id: '8', title: 'Tie', subtitle: 'Dry Clean', price: 3.00, category: 'Dry Cleaning/Shirts' },
+        { id: '40', title: 'Dress Shirt', subtitle: '5 or more £3 each', price: 5.00, category: 'Dry Cleaning/Shirts' },
         
         // SUEDE & LEATHER
         { id: '9', title: 'Jacket', subtitle: 'Suede & Leather', price: 85.99, category: 'Suede & Leather' },
@@ -50,6 +51,7 @@ export default function PricingPage() {
         { id: '22', title: 'King/Queen Duvet', subtitle: 'Laundry', price: 35.00, category: 'Laundry' },
         { id: '23', title: 'Blanket', subtitle: 'from', price: 15.99, category: 'Laundry' },
         { id: '24', title: 'Towels', subtitle: 'Laundry', price: 5.00, category: 'Laundry' },
+        { id: '41', title: 'Wash, Dry & Fold', subtitle: 'One bucket', price: '£35-45', category: 'Laundry' },
         
         // SERVICE WASHES
         { id: '25', title: 'Small', subtitle: 'Service Wash', price: 26.00, category: 'Service Washes' },
