@@ -80,8 +80,8 @@ const servicesData = [
     title: "Laundry Services",
     description: "Complete wash, dry, and fold services with professional laundering and pressing",
     pricing: [
-      { item: "Wash & Fold (per lb)", price: 1.99 },
-      { item: "Dress Shirts (laundered)", price: 3.99 },
+      { item: "Wash, Dry & Fold - One bucket", price: "£35-45" },
+      { item: "Dress Shirt (5 or more £3 each)", price: 5.00 },
       { item: "Comforter (Twin)", price: 12.99 },
       { item: "Comforter (Queen/King)", price: 18.99 },
       { item: "Blanket", price: 9.99 },
@@ -207,15 +207,13 @@ function ServiceOrderContent() {
         <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
           <div className="gap-4 grid grid-cols-2">
             {selectedService.pricing.map((priceItem, index) => (
-              typeof priceItem.price === 'number' && (
-                <ServiceItem
-                  key={index}
-                  title={priceItem.item}
-                  price={priceItem.price}
-                  isExpanded={false}
-                  onToggleExpand={() => handleToggleExpand(priceItem.item)}
-                />
-              )
+              <ServiceItem
+                key={index}
+                title={priceItem.item}
+                price={priceItem.price}
+                isExpanded={false}
+                onToggleExpand={() => handleToggleExpand(priceItem.item)}
+              />
             ))}
           </div>
         </section>
