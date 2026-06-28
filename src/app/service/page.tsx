@@ -78,8 +78,8 @@ const ServicesPage: React.FC = () => {
             title: "Laundry Services",
             description: "Complete wash, dry, and fold services with professional laundering and pressing",
             pricing: [
-                { item: "Wash & Fold (per lb)", price: 1.99 },
-                { item: "Dress Shirts (laundered)", price: 3.99 },
+                { item: "Wash, Dry & Fold - One bucket", price: "£35-45" },
+                { item: "Dress Shirt (5 or more £3 each)", price: 5.00 },
                 { item: "Comforter (Twin)", price: 12.99 },
                 { item: "Comforter (Queen/King)", price: 18.99 },
                 { item: "Blanket", price: 9.99 },
