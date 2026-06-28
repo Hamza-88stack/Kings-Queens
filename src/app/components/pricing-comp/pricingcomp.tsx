@@ -4,7 +4,7 @@ import {  MapPin, Minus, Plus } from 'lucide-react';
 interface ServiceItemProps {
     title: string;
     subtitle?: string;
-    price: number;
+    price: number | string;
     currency?: string;
     isExpanded?: boolean;
     onToggleExpand?: () => void;
@@ -42,6 +42,8 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
         onToggleExpand?.();
     };
 
+    const formattedPrice = typeof price === 'number' ? `${currency}${price.toFixed(2)}` : price;
+
     return (
         <div className={`rounded-lg overflow-hidden ${isExpanded ? 'bg-gradient-to-b from-[#C6AE64] to-[#9C7238]' : 'bg-[#141414]'} text-white transition-all duration-300 ${isExpanded ? 'row-span-3' : ''}`}>
             {/* Main Item Row */}
@@ -59,7 +61,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
                 </div>
                 <div className="flex items-center gap-3">
                     <span className={`text-md font-[200] ${isExpanded ? 'text-black font-[400]' : 'text-white'}`}>
-                        {currency}{price.toFixed(2)}
+                        {formattedPrice}
                     </span>
 
                     {/* Quantity Controls - only show when expanded */}
