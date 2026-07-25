@@ -81,7 +81,7 @@ export default function ServiceDetailPage() {
 
       {/* NAV */}
       <nav className={`sv-nav ${navScrolled ? 's' : ''}`}>
-        <Link to="/"><img src="KNQ_logo_for_website__3__e07d6e57__1_.svg" alt="Kings & Queens" className="sv-nav-logo" /></Link>
+        <Link to="/"><img src="/knqlogo.svg" alt="Kings & Queens" className="sv-nav-logo" /></Link>
         <div className="sv-nav-r">
           <ul className="sv-nav-links">
             <li><Link to="/services" style={{ color: 'var(--gold)' }}>Services</Link></li>
@@ -243,7 +243,7 @@ export default function ServiceDetailPage() {
       <footer className="sv-ft">
         <div className="sv-ft-g">
           <div>
-            <img src="KNQ_logo_for_website__3__e07d6e57__1_.svg" alt="Kings & Queens" style={{ height: '34px', width: 'auto', filter: 'brightness(1.1)' }} />
+            <img src="/knqlogo.svg" alt="Kings & Queens" style={{ height: '34px', width: 'auto', filter: 'brightness(1.1)' }} />
             <p className="sv-ft-desc">Premium dry cleaning and laundrette in Waterloo, London. Trusted for over 15 years.</p>
           </div>
           <div className="sv-ft-col">

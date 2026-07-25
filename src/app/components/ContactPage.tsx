@@ -139,7 +139,7 @@ export default function ContactPage() {
       <nav className={`ct-nav ${navScrolled ? 's' : ''}`}>
         <Link to="/">
           <img
-            src="KNQ_logo_for_website__3__e07d6e57__1_.svg"
+            src="/knqlogo.svg"
             alt="Kings & Queens"
             className="ct-nav-logo"
           />
@@ -167,7 +167,7 @@ export default function ContactPage() {
       <div className={`ct-slide-overlay ${mobileMenuOpen ? 'open' : ''}`} onClick={() => setMobileMenuOpen(false)}></div>
       <div className={`ct-slide-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <div className="ct-slide-top">
-          <img src="KNQ_logo_for_website__3__e07d6e57__1_.svg" alt="Kings & Queens" style={{ height: '32px', width: 'auto', filter: 'brightness(1.1)' }} />
+          <img src="/knqlogo.svg" alt="Kings & Queens" style={{ height: '32px', width: 'auto', filter: 'brightness(1.1)' }} />
           <div className="ct-slide-close" onClick={() => setMobileMenuOpen(false)}><span></span><span></span></div>
         </div>
         <div className="ct-slide-links">
@@ -489,7 +489,7 @@ export default function ContactPage() {
           <div>
             <div className="ct-ft-brand">
               <img
-                src="KNQ_logo_for_website__3__e07d6e57__1_.svg"
+                src="/knqlogo.svg"
                 alt="Kings & Queens"
                 style={{ height: '34px', width: 'auto', filter: 'brightness(1.1)' }}
               />

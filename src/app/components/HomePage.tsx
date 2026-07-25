@@ -113,7 +113,7 @@ export default function HomePage() {
       <nav className={`nav ${navScrolled ? 's' : ''}`} id="nav">
         <a href="#" className="n-brand" onClick={(e) => e.preventDefault()}>
           <img
-            src="KNQ_logo_for_website__3__e07d6e57__1_.svg"
+            src="/knqlogo.svg"
             alt="Kings & Queens Dry Cleaning & Laundrette"
             style={{ height: '40px', width: 'auto', display: 'block', filter: 'brightness(1.1)' }}
           />
@@ -162,7 +162,7 @@ export default function HomePage() {
       <div className={`slide-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <div className="slide-menu-top">
           <img
-            src="KNQ_logo_for_website__3__e07d6e57__1_.svg"
+            src="/knqlogo.svg"
             alt="Kings & Queens"
             style={{ height: '32px', width: 'auto', filter: 'brightness(1.1)' }}
           />
@@ -660,7 +660,7 @@ export default function HomePage() {
           <div>
             <div className="ft-b">
               <img
-                src="KNQ_logo_for_website__3__e07d6e57__1_.svg"
+                src="/knqlogo.svg"
                 alt="Kings & Queens"
                 style={{
                   height: '34px',

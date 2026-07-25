@@ -87,7 +87,7 @@ export default function AboutPage() {
       <nav className={`ab-nav ${navScrolled ? 's' : ''}`}>
         <Link to="/">
           <img
-            src="KNQ_logo_for_website__3__e07d6e57__1_.svg"
+            src="/knqlogo.svg"
             alt="Kings & Queens"
             className="ab-nav-logo"
           />
@@ -115,7 +115,7 @@ export default function AboutPage() {
       <div className={`ab-slide-overlay ${mobileMenuOpen ? 'open' : ''}`} onClick={() => setMobileMenuOpen(false)}></div>
       <div className={`ab-slide-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <div className="ab-slide-top">
-          <img src="KNQ_logo_for_website__3__e07d6e57__1_.svg" alt="Kings & Queens" style={{ height: '32px', width: 'auto', filter: 'brightness(1.1)' }} />
+          <img src="/knqlogo.svg" alt="Kings & Queens" style={{ height: '32px', width: 'auto', filter: 'brightness(1.1)' }} />
           <div className="ab-slide-close" onClick={() => setMobileMenuOpen(false)}><span></span><span></span></div>
         </div>
         <div className="ab-slide-links">
@@ -449,7 +449,7 @@ export default function AboutPage() {
           <div>
             <div className="ab-ft-brand">
               <img
-                src="KNQ_logo_for_website__3__e07d6e57__1_.svg"
+                src="/knqlogo.svg"
                 alt="Kings & Queens"
                 style={{ height: '34px', width: 'auto', filter: 'brightness(1.1)' }}
               />

@@ -94,7 +94,7 @@ export default function PrivateClientsPage() {
       <div className="sv-cur-o" ref={curORef}></div>
 
       <nav className={`sv-nav ${navScrolled ? 's' : ''}`}>
-        <Link to="/"><img src="KNQ_logo_for_website__3__e07d6e57__1_.svg" alt="Kings & Queens" className="sv-nav-logo" /></Link>
+        <Link to="/"><img src="/knqlogo.svg" alt="Kings & Queens" className="sv-nav-logo" /></Link>
         <div className="sv-nav-r">
           <ul className="sv-nav-links">
             <li><Link to="/services">Services</Link></li>
@@ -114,7 +114,7 @@ export default function PrivateClientsPage() {
       <div className={`sv-slide-overlay ${mobileMenuOpen ? 'open' : ''}`} onClick={() => setMobileMenuOpen(false)}></div>
       <div className={`sv-slide-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <div className="sv-slide-top">
-          <img src="KNQ_logo_for_website__3__e07d6e57__1_.svg" alt="Kings & Queens" style={{ height: '32px', width: 'auto', filter: 'brightness(1.1)' }} />
+          <img src="/knqlogo.svg" alt="Kings & Queens" style={{ height: '32px', width: 'auto', filter: 'brightness(1.1)' }} />
           <div className="sv-slide-close" onClick={() => setMobileMenuOpen(false)}><span></span><span></span></div>
         </div>
         <div className="sv-slide-links">
@@ -207,7 +207,7 @@ export default function PrivateClientsPage() {
       <footer className="sv-ft">
         <div className="sv-ft-g">
           <div>
-            <img src="KNQ_logo_for_website__3__e07d6e57__1_.svg" alt="Kings & Queens" style={{ height: '34px', width: 'auto', filter: 'brightness(1.1)' }} />
+            <img src="/knqlogo.svg" alt="Kings & Queens" style={{ height: '34px', width: 'auto', filter: 'brightness(1.1)' }} />
             <p className="sv-ft-desc">Premium dry cleaning and private garment care in Waterloo, London. Trusted for over 15 years.</p>
           </div>
           <div className="sv-ft-col">
