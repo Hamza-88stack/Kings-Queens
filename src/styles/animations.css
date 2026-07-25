@@ -1,0 +1,19 @@
+@keyframes rot {
+  0%, 22% { transform: translateY(0); }
+  27%, 55% { transform: translateY(-33.33%); }
+  60%, 88% { transform: translateY(-66.66%); }
+  93%, 100% { transform: translateY(0); }
+}
+
+.animate-text-rotate {
+  animation: rot 9s cubic-bezier(.22, 1, .36, 1) infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: scroll 28s linear infinite;
+}

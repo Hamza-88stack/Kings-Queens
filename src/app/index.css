@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold-400: #D4C48A;
+  --color-gold-500: #C1A75F;
+  --color-gold-600: #AF8C51;
+  --color-rich-black: #06060A;
+  --color-charcoal: #0C0C12;
+  
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Sora", system-ui, sans-serif;
+}
