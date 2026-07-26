@@ -178,7 +178,9 @@ export default function PrivateClientsPage() {
               className="sv-private-card-img"
             />
             <div className="sv-private-card-caption">
-              <div className="sv-private-crown">K&Q</div>
+              <div className="sv-private-crown">
+                <img src="/knqlogo.svg" alt="Kings & Queens emblem" />
+              </div>
               <h2>Trust in Discretion</h2>
               <p>
                 "Kings & Queens delivered flawless couture wardrobe care, with absolute discretion

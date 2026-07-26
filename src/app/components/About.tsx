@@ -15,7 +15,7 @@ export function About() {
                 className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay"
              />
              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                 <span className="font-serif text-[7rem] italic text-gold opacity-[0.08] tracking-[-0.05em]">K&Q</span>
+                 <img src="/knqlogo.svg" alt="" className="w-64 opacity-[0.08]" aria-hidden="true" />
              </div>
           </div>
           <div className="absolute -bottom-6 -right-6 w-[150px] h-[150px] bg-linear-to-br from-gold-deep via-gold-h to-gold-deep flex flex-col items-center justify-center text-center z-10 shadow-2xl">

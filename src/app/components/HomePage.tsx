@@ -414,7 +414,9 @@ export default function HomePage() {
               className="pcx-card-img"
             />
             <div className="pcx-card-caption">
-              <div className="pcx-mark">K&amp;Q</div>
+              <div className="pcx-mark">
+                <img src="/knqlogo.svg" alt="Kings & Queens emblem" />
+              </div>
               <p>
                 Private wardrobe care for couture fabrics, elite residences and time-sensitive
                 household requests.
