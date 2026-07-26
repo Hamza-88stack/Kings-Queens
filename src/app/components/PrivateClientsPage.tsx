@@ -1,7 +1,26 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router';
-import { ShieldCheck, ReceiptText, PhoneCall, Timer, Car } from 'lucide-react';
+import { MessageCircle, PhoneCall, ReceiptText, ShieldCheck, Timer, UserRound, Car } from 'lucide-react';
 import '../../styles/services.css';
+
+const PRIVATE_CONTACTS = [
+  {
+    name: 'Simba',
+    role: 'Private Clients Desk',
+    phone: '+44 7512 244796',
+    tel: '+447512244796',
+    whatsapp: '447512244796',
+    note: 'Direct contact for principal accounts, collection coordination and urgent wardrobe care.',
+  },
+  {
+    name: 'Basit',
+    role: 'Private Clients Desk',
+    phone: '+44 7503 344983',
+    tel: '+447503344983',
+    whatsapp: '447503344983',
+    note: 'Direct contact for account enquiries, concierge requests and private client support.',
+  },
+];
 
 const PRIVILEGES = [
   {
@@ -168,6 +187,43 @@ export default function PrivateClientsPage() {
               <span>Residence Manager, Mayfair Estate</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="sv-private-contacts">
+        <div className="sv-pricing-top">
+          <div>
+            <div className="sv-label sv-reveal">Private Desk</div>
+            <h2 className="sv-sh sv-reveal">Your two main contacts for <em>private care.</em></h2>
+          </div>
+          <p className="sv-pricing-desc sv-reveal">
+            Reach Simba or Basit directly for discreet collections, principal accounts and priority handling.
+          </p>
+        </div>
+        <div className="sv-private-contact-grid">
+          {PRIVATE_CONTACTS.map(({ name, role, phone, tel, whatsapp, note }) => (
+            <article className="sv-private-contact sv-reveal" key={name}>
+              <div className="sv-private-contact-icon">
+                <UserRound size={24} />
+              </div>
+              <div>
+                <p className="sv-private-contact-role">{role}</p>
+                <h3>{name}</h3>
+                <a href={`tel:${tel}`} className="sv-private-contact-phone">{phone}</a>
+                <p>{note}</p>
+              </div>
+              <div className="sv-private-contact-actions">
+                <a href={`tel:${tel}`} className="sv-mini-action">
+                  <PhoneCall size={16} />
+                  Call
+                </a>
+                <a href={`https://wa.me/${whatsapp}`} target="_blank" rel="noopener noreferrer" className="sv-mini-action">
+                  <MessageCircle size={16} />
+                  WhatsApp
+                </a>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
