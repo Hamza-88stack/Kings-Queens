@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kq-laundry-new-design.vercel.app/sitemap.xml

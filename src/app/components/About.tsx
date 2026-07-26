@@ -11,7 +11,7 @@ export function About() {
             {/* Replaced placeholder with an actual image */}
              <ImageWithFallback 
                 src="/images/knq-storefront-elite.jpg"
-                alt="Luxury Dry Cleaning"
+                alt="Kings & Queens Dry Cleaning storefront at 221 Waterloo Road, London SE1"
                 className="absolute inset-0 w-full h-full object-cover opacity-90"
              />
              <div className="absolute inset-4 border border-gold/15 pointer-events-none">
