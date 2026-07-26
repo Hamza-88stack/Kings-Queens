@@ -10,12 +10,11 @@ export function About() {
           <div className="w-full aspect-[4/5] bg-linear-to-b from-bg3 to-bg border border-bdr2 flex items-center justify-center relative overflow-hidden">
             {/* Replaced placeholder with an actual image */}
              <ImageWithFallback 
-                src="/images/luxury-shirt-service.jpg"
+                src="/images/knq-storefront-elite.jpg"
                 alt="Luxury Dry Cleaning"
-                className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay"
+                className="absolute inset-0 w-full h-full object-cover opacity-90"
              />
-             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                 <img src="/knqlogo.svg" alt="" className="w-64 opacity-[0.08]" aria-hidden="true" />
+             <div className="absolute inset-4 border border-gold/15 pointer-events-none">
              </div>
           </div>
           <div className="absolute -bottom-6 -right-6 w-[150px] h-[150px] bg-linear-to-br from-gold-deep via-gold-h to-gold-deep flex flex-col items-center justify-center text-center z-10 shadow-2xl">
