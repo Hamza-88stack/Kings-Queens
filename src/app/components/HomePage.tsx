@@ -2,6 +2,21 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router';
 import '../../styles/kings-queens.css';
 
+const PRIVATE_CONTACTS = [
+  {
+    name: 'Simba',
+    phone: '+44 7512 244796',
+    tel: '+447512244796',
+    whatsapp: '447512244796',
+  },
+  {
+    name: 'Basit',
+    phone: '+44 7503 344983',
+    tel: '+447503344983',
+    whatsapp: '447503344983',
+  },
+];
+
 export default function HomePage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [navScrolled, setNavScrolled] = useState(false);
@@ -368,6 +383,20 @@ export default function HomePage() {
               <span>NDA privacy protocols</span>
               <span>Bespoke monthly invoicing</span>
               <span>Priority 24-hour turnaround</span>
+            </div>
+            <div className="pcx-contacts">
+              {PRIVATE_CONTACTS.map(({ name, phone, tel, whatsapp }) => (
+                <div className="pcx-contact" key={name}>
+                  <div>
+                    <small>Private Desk</small>
+                    <strong>{name}</strong>
+                    <a href={`tel:${tel}`}>{phone}</a>
+                  </div>
+                  <a href={`https://wa.me/${whatsapp}`} target="_blank" rel="noopener noreferrer">
+                    WhatsApp
+                  </a>
+                </div>
+              ))}
             </div>
             <div className="pcx-actions">
               <Link to="/private-clients" className="btn btn-g">
