@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router';
-import { MessageCircle, PhoneCall, ReceiptText, ShieldCheck, Timer, UserRound, Car } from 'lucide-react';
+import { ArrowRight, MessageCircle, PhoneCall, ReceiptText, ShieldCheck, Timer, UserRound, Car } from 'lucide-react';
 import '../../styles/services.css';
 
 const PRIVATE_CONTACTS = [
@@ -10,6 +10,7 @@ const PRIVATE_CONTACTS = [
     phone: '+44 7512 244796',
     tel: '+447512244796',
     whatsapp: '447512244796',
+    slug: 'simba',
     note: 'Direct contact for principal accounts, collection coordination and urgent wardrobe care.',
   },
   {
@@ -18,6 +19,7 @@ const PRIVATE_CONTACTS = [
     phone: '+44 7503 344983',
     tel: '+447503344983',
     whatsapp: '447503344983',
+    slug: 'basit',
     note: 'Direct contact for account enquiries, concierge requests and private client support.',
   },
 ];
@@ -203,7 +205,7 @@ export default function PrivateClientsPage() {
           </p>
         </div>
         <div className="sv-private-contact-grid">
-          {PRIVATE_CONTACTS.map(({ name, role, phone, tel, whatsapp, note }) => (
+          {PRIVATE_CONTACTS.map(({ name, role, phone, tel, whatsapp, slug, note }) => (
             <article className="sv-private-contact sv-reveal" key={name}>
               <div className="sv-private-contact-icon">
                 <UserRound size={24} />
@@ -223,6 +225,10 @@ export default function PrivateClientsPage() {
                   <MessageCircle size={16} />
                   WhatsApp
                 </a>
+                <Link to={`/private-clients/${slug}`} className="sv-mini-action">
+                  View Profile
+                  <ArrowRight size={16} />
+                </Link>
               </div>
             </article>
           ))}

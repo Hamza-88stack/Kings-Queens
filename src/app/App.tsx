@@ -6,6 +6,7 @@ import ServicesPage from './components/ServicesPage';
 import PricingPage from './components/PricingPage';
 import ServiceDetailPage from './components/ServiceDetailPage';
 import PrivateClientsPage from './components/PrivateClientsPage';
+import PrivateContactPage from './components/PrivateContactPage';
 import SeoManager from './components/SeoManager';
 
 function SeoLayout() {
@@ -44,6 +45,14 @@ const router = createBrowserRouter([
       {
         path: 'private-clients',
         Component: PrivateClientsPage,
+      },
+      {
+        path: 'private-clients/simba',
+        element: <PrivateContactPage contactKey="simba" />,
+      },
+      {
+        path: 'private-clients/basit',
+        element: <PrivateContactPage contactKey="basit" />,
       },
       {
         path: 'service/order',

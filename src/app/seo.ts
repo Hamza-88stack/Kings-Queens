@@ -45,6 +45,22 @@ export const SEO_BY_PATH: Record<string, SeoConfig> = {
     keywords:
       'private dry cleaning London, private laundry service, estate laundry London, couture garment care London, discreet dry cleaning',
   },
+  '/private-clients/simba': {
+    title: 'Contact Simba | Kings & Queens Private Clients London',
+    description:
+      'Contact Simba directly for Kings & Queens principal accounts, private garment-care collections, priority requests and wardrobe support across London.',
+    path: '/private-clients/simba',
+    keywords:
+      'Simba Kings Queens, private client dry cleaning contact, private garment care London, priority dry cleaning collection London',
+  },
+  '/private-clients/basit': {
+    title: 'Contact Basit | Kings & Queens Private Clients London',
+    description:
+      'Contact Basit directly for Kings & Queens private account enquiries, concierge requests, collections and ongoing garment-care support across London.',
+    path: '/private-clients/basit',
+    keywords:
+      'Basit Kings Queens, private client laundry contact, concierge dry cleaning London, private laundry collection London',
+  },
   '/about': {
     title: 'About Kings & Queens Dry Cleaning | Waterloo SE1 London',
     description:
@@ -74,4 +90,3 @@ export const SEO_BY_PATH: Record<string, SeoConfig> = {
 };
 
 export const DEFAULT_SEO = SEO_BY_PATH['/'];
-
