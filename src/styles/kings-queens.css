@@ -240,7 +240,7 @@
 .home-page .fd select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6A68' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center}
 
 /* ═══ FOOTER ═══ */
-.home-page .ft{background:var(--bg);border-top:1px solid var(--bdr2);padding:4rem 5vw 1.5rem}
+.home-page .ft{background:var(--bg);border-top:1px solid var(--bdr2);padding:3.5rem 5vw}
 .home-page .ft-g{display:grid;grid-template-columns:2.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:4rem}
 .home-page .ft-b{margin-bottom:1rem}
 .home-page .ft-desc{font-size:.78rem;color:var(--txt3);line-height:1.75;max-width:280px;font-weight:300}

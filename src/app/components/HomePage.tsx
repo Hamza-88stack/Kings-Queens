@@ -694,7 +694,7 @@ export default function HomePage() {
                 src="/knqlogo.svg"
                 alt="Kings & Queens"
                 style={{
-                  height: '34px',
+                  height: '44px',
                   width: 'auto',
                   display: 'block',
                   filter: 'brightness(1.1)',

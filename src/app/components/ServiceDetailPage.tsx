@@ -243,7 +243,7 @@ export default function ServiceDetailPage() {
       <footer className="sv-ft">
         <div className="sv-ft-g">
           <div>
-            <img src="/knqlogo.svg" alt="Kings & Queens" style={{ height: '34px', width: 'auto', filter: 'brightness(1.1)' }} />
+            <img src="/knqlogo.svg" alt="Kings & Queens" style={{ height: '44px', width: 'auto', display: 'block', filter: 'brightness(1.1)' }} />
             <p className="sv-ft-desc">Premium dry cleaning and laundrette in Waterloo, London. Trusted for over 15 years.</p>
           </div>
           <div className="sv-ft-col">

@@ -255,7 +255,7 @@
 .services-page .sv-cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 
 /* ═══ FOOTER ═══ */
-.services-page .sv-ft{background:var(--bg);border-top:1px solid var(--bdr2);padding:4rem 5vw 1.5rem}
+.services-page .sv-ft{background:var(--bg);border-top:1px solid var(--bdr2);padding:3.5rem 5vw}
 .services-page .sv-ft-g{display:grid;grid-template-columns:2.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:4rem}
 .services-page .sv-ft-brand{margin-bottom:1rem}
 .services-page .sv-ft-desc{font-size:.78rem;color:var(--txt3);line-height:1.75;max-width:280px;font-weight:300}

@@ -451,7 +451,7 @@ export default function AboutPage() {
               <img
                 src="/knqlogo.svg"
                 alt="Kings & Queens"
-                style={{ height: '34px', width: 'auto', filter: 'brightness(1.1)' }}
+                style={{ height: '44px', width: 'auto', display: 'block', filter: 'brightness(1.1)' }}
               />
             </div>
             <p className="ab-ft-desc">
